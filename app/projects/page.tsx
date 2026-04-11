@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import { PROJECTS } from "./data";
 
@@ -16,35 +17,67 @@ export default function Projects() {
                 <h1 className="text-6xl md:text-7xl xl:text-8xl font-serif leading-tight">
                     <span className="relative">
                         P
-                        <Image
-                            src='/f1.svg'
-                            width={100}
-                            height={100}
-                            alt="flower"
-                            className="absolute -top-10 md:-top-12 xl:-top-16 -left-5 md:-left-6 xl:-left-8 w-full h-full object-contain"
-                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+                            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                            transition={{ 
+                                duration: 1, 
+                                ease: "easeOut" 
+                            }}
+                            className="absolute -top-10 md:-top-12 xl:-top-16 -left-5 md:-left-6 xl:-left-8 w-full h-full"
+                        >
+                            <Image
+                                src='/f1.svg'
+                                width={100}
+                                height={100}
+                                alt="flower"
+                                className="w-full h-full object-contain"
+                            />
+                        </motion.div>
                     </span>
                     rojects I {" "}
                     <span className="relative">
                         W
-                        <Image
-                            src='/f2.svg'
-                            width={100}
-                            height={100}
-                            alt="flower"
-                            className="hidden md:block absolute -top-8 xl:-top-12 -right-8.5 xl:-right-12 w-full h-full object-contain"
-                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
+                            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                            transition={{ 
+                                duration: 1, 
+                                delay: 0.2,
+                                ease: "easeOut" 
+                            }}
+                            className="hidden md:block absolute -top-8 xl:-top-12 -right-8.5 xl:-right-12 w-full h-full"
+                        >
+                            <Image
+                                src='/f2.svg'
+                                width={100}
+                                height={100}
+                                alt="flower"
+                                className="w-full h-full object-contain"
+                            />
+                        </motion.div>
                     </span>
                     orked O
                     <span className="relative">
                         n
-                        <Image
-                            src='/f3.svg'
-                            width={100}
-                            height={100}
-                            alt="flower"
-                            className="absolute -top-6 xl:-top-8 -right-4 xl:-right-6 w-full h-full object-contain"
-                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+                            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                            transition={{ 
+                                duration: 1, 
+                                delay: 0.4,
+                                ease: "easeOut" 
+                            }}
+                            className="absolute -top-6 xl:-top-8 -right-4 xl:-right-6 w-full h-full"
+                        >
+                            <Image
+                                src='/f3.svg'
+                                width={100}
+                                height={100}
+                                alt="flower"
+                                className="w-full h-full object-contain"
+                            />
+                        </motion.div>
                     </span>
                 </h1>
                 <p className="text-brand-yellow font-semibold md:text-xl">

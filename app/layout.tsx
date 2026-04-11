@@ -19,24 +19,27 @@ const kalam = Kalam({
 });
 
 export const metadata: Metadata = {
-  title: "Abhishek | Product Designer & Interaction Specialist",
-  description: "Portfolio of Abhishek, a Product Designer based in Bangalore specializing in high-fidelity interactive experiences and digital products.",
+  metadataBase: new URL("https://abhiramvenugopal.com"), // Update this with your final domain
+  title: "Abhiram Venugopal | Product Designer & Interaction Specialist",
+  description: "Portfolio of Abhiram Venugopal, a Product Designer based in Bangalore specializing in high-fidelity interactive experiences and digital products.",
   keywords: ["Product Design", "UX/UI", "Interaction Design", "Portfolio", "Bangalore", "Front-end Development", "Next.js", "Framer Motion", "Case Studies"],
-  authors: [{ name: "Abhishek" }],
-  creator: "Abhishek",
+  authors: [{ name: "Abhiram Venugopal" }],
+  creator: "Abhiram Venugopal",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://abhishekportfolio.com",
-    title: "Abhishek | Product Designer & Interaction Specialist",
+    url: "https://abhiramvenugopal.com",
+    title: "Abhiram Venugopal | Product Designer",
     description: "Building high-fidelity interactive experiences and digital products.",
-    siteName: "Abhishek Portfolio",
+    siteName: "Abhiram Venugopal Portfolio",
+    images: ["/logo.svg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abhishek | Product Designer & Interaction Specialist",
+    title: "Abhiram Venugopal | Product Designer",
     description: "Building high-fidelity interactive experiences and digital products.",
-    creator: "@abhishek", // Replace with actual handle if applicable
+    creator: "@Abhiram Venugopal",
+    images: ["/logo.svg"],
   },
   robots: {
     index: true,

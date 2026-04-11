@@ -63,12 +63,12 @@ export default function Navbar() {
             // Link color logic
             let linkColor;
             if (isScrolled) {
-              linkColor = isActive ? "text-brand-yellow" : "hover:text-black";
+              linkColor = isActive ? "text-brand-yellow" : "text-black/70 hover:text-black";
             } else {
               if (isWhiteTextPage) {
-                linkColor = isActive ? "text-brand-yellow" : "hover:text-white";
+                linkColor = isActive ? "text-brand-yellow" : "text-white/80 hover:text-white";
               } else {
-                linkColor = isActive ? "text-brand-yellow" : "hover:text-black";
+                linkColor = isActive ? "text-brand-yellow" : "text-black/70 hover:text-black";
               }
             }
 
