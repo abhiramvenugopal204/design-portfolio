@@ -39,12 +39,12 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-[2px] flex items-center justify-between px-6 lg:px-8 py-4 md:py-6 transition-all duration-300 bg-gradient-to-b from-black/25 to-transparent
+        className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-[1px] flex items-center justify-between px-6 lg:px-8 py-4 md:py-6 transition-all duration-300 bg-gradient-to-b from-black/25 to-transparent
           } ${isOpen ? 'bg-transparent shadow-none' : ''}`}
       >
         {/* Logo Section */}
         <div className={`flex items-center gap-3 transition-colors duration-300 ${textColor}`}>
-          <Link href="/" className={`w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center overflow-hidden transition-all hover:scale-105 ${isScrolled ? 'bg-black/5' : (isWhiteTextPage ? 'bg-white/5' : 'bg-black/5')
+          <Link href="/" className={`w-10 h-10 lg:w-12 lg:h-12 rounded-full border flex items-center justify-center overflow-hidden transition-all hover:scale-105 ${isScrolled ? 'border-black/10 bg-black/5' : (isWhiteTextPage ? 'border-white/20' : 'border-black/20')
             }`}>
             <Image src="/logo.svg" alt="Logo" width={48} height={48} className="object-cover" />
           </Link>
@@ -63,12 +63,12 @@ export default function Navbar() {
             // Link color logic
             let linkColor;
             if (isScrolled) {
-              linkColor = isActive ? "text-brand-yellow" : "text-black/70 hover:text-black";
+              linkColor = isActive ? "text-brand-yellow" : "hover:text-black";
             } else {
               if (isWhiteTextPage) {
-                linkColor = isActive ? "text-brand-yellow" : "text-white/80 hover:text-white";
+                linkColor = isActive ? "text-brand-yellow" : "hover:text-white";
               } else {
-                linkColor = isActive ? "text-brand-yellow" : "text-black/70 hover:text-black";
+                linkColor = isActive ? "text-brand-yellow" : "hover:text-black";
               }
             }
 
