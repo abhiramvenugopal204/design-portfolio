@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     title: "Abhiram Venugopal | Product Designer",
     description: "Building high-fidelity interactive experiences and digital products.",
     siteName: "Abhiram Venugopal Portfolio",
-    images: ["/logo.svg"],
+    images: ["https://abhiram-s-portfolio-umber.vercel.app/icon0.svg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Abhiram Venugopal | Product Designer",
     description: "Building high-fidelity interactive experiences and digital products.",
     creator: "@Abhiram Venugopal",
-    images: ["/logo.svg"],
+    images: ["https://abhiram-s-portfolio-umber.vercel.app/icon0.svg"],
   },
   robots: {
     index: true,
@@ -57,6 +57,9 @@ export default function RootLayout({
       lang="en"
       className={`${fredericka.variable} ${kalam.variable} h-full antialiased`}
     >
+      <head>
+        <meta property="og:image" content="https://abhiram-s-portfolio-umber.vercel.app/icon0.svg" />
+      </head>
       <body className="min-h-full flex flex-col relative">
         <DotGrid />
         <Navbar />

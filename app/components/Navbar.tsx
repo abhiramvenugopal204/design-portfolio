@@ -49,7 +49,7 @@ export default function Navbar() {
             <Image src="/logo.svg" alt="Logo" width={48} height={48} className="object-cover" />
           </Link>
           <div className="flex flex-col">
-            <span className="text-sm font-semibold tracking-tight">Abhishek Portfolio</span>
+            <span className="text-sm font-semibold tracking-tight">Abhiram Venugopal</span>
             <span className={`text-xs hidden md:block opacity-80 tracking-tight`}>Bangalore, IN</span>
             <span className={`text-xs block md:hidden opacity-80 tracking-tight`}>Product Designer</span>
           </div>
