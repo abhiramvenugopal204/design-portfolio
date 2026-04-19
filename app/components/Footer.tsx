@@ -12,7 +12,7 @@ export default function Footer() {
   if (pathname === "/contact") return null;
 
   return (
-    <footer>
+    <footer className="overflow-hidden">
       <div className="px-6 sm:px-10 md:px-12 pt-8 md:pt-20 pb-4 md:pb-8 font-bold text-lg">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 items-start">
 

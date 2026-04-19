@@ -107,7 +107,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-3 relative z-[10001] rounded-full transition-colors duration-300 ${isScrolled ? 'text-black hover:bg-black/5' : (isWhiteTextPage ? 'text-white hover:bg-white/10' : 'text-black hover:bg-black/10')
+            className={`md:hidden py-3 relative z-[101] rounded-full transition-colors duration-300 ${isScrolled ? 'text-black hover:bg-black/5' : (isWhiteTextPage ? 'text-white hover:bg-white/10' : 'text-black hover:bg-black/10')
               }`}
             aria-label="Toggle Menu"
           >

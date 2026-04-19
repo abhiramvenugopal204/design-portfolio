@@ -37,7 +37,7 @@ function ProjectCard({ title, description, className }: ProjectCardProps) {
 
 export default function ProjectGrid() {
   return (
-    <section className="relative z-10 py-12 md:py-16 px-4 lg:px-12 flex flex-col gap-6">
+    <section className="overflow-hidden relative z-10 py-12 md:py-16 px-4 lg:px-12 flex flex-col gap-6">
       <div className="flex justify-between items-center z-10">
         <h2 className="text-2xl font-bold">
           From crafting experiences to solving problems
