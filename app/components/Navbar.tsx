@@ -39,8 +39,8 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-[1px] flex items-center justify-between px-6 lg:px-8 py-4 md:py-6 transition-all duration-300 bg-gradient-to-b from-black/25 to-transparent
-          } ${isOpen ? 'bg-transparent shadow-none' : ''}`}
+        className={`max-w-[1920px] mx-auto fixed top-0 left-0 right-0 z-50 backdrop-blur-[1px] flex items-center justify-between px-6 lg:px-8 py-4 md:py-6 transition-all duration-300 bg-gradient-to-b from-black/25 to-transparent
+          } ${isOpen ? 'bg-transparent shadow-none' : ''} ${(isScrolled || !isWhiteTextPage) ? 'bg-gradient-to-b from-white to-transparent' : ''}`}
       >
         {/* Logo Section */}
         <div className={`flex items-center gap-3 transition-colors duration-300 ${textColor}`}>

@@ -4,10 +4,11 @@ import Link from "next/link";
 interface ProjectCardProps {
   title: string;
   description: string;
+  img: string;
   className?: string;
 }
 
-function ProjectCard({ title, description, className }: ProjectCardProps) {
+function ProjectCard({ title, description, img, className }: ProjectCardProps) {
   return (
     <div className={`relative p-6 bg-brand-yellow w-full h-full flex flex-col items-center justify-end ${className}`}>
       <Image src="/line1.svg" alt={title} width={400} height={400} className="absolute -top-1.5 left-0 w-full h-fit object-fill" />
@@ -15,7 +16,7 @@ function ProjectCard({ title, description, className }: ProjectCardProps) {
       <Image src="/line1.svg" alt={title} width={400} height={400} className="absolute -bottom-1.5 right-0 w-full h-fit object-fill" />
       <Image src="/line2.svg" alt={title} width={400} height={400} className="absolute bottom-0 -right-1.5 w-fit h-full object-fill" />
 
-    <Image src="/case.svg" alt={title} width={400} height={400} className="block md:hidden absolute -top-2 -right-4 w-fit h-[3em] rotate-25 object-fill" />
+      <Image src="/case.svg" alt={title} width={400} height={400} className="block md:hidden absolute -top-2 -right-4 w-fit h-[3em] rotate-25 object-fill" />
 
       <div className="z-10 flex flex-col gap-4 relative ">
         <h3 className="text-xl md:text-2xl font-bold">
@@ -24,12 +25,12 @@ function ProjectCard({ title, description, className }: ProjectCardProps) {
         <p className="text-md md:text-lg font-medium">
           {description}
         </p>
-        <div className="relative bg-white w-full h-40 md:h-52">
-          <Image src="/line3.svg" alt={title} width={400} height={400} className="absolute -top-1 left-0 w-full h-fit object-fill" />
-          <Image src="/line4.svg" alt={title} width={400} height={400} className="absolute top-0 -left-1 w-fit h-full object-fill" />
-          <Image src="/line3.svg" alt={title} width={400} height={400} className="absolute -bottom-1 right-0 w-full h-fit object-fill" />
-          <Image src="/line4.svg" alt={title} width={400} height={400} className="absolute bottom-0 -right-1 w-fit h-full object-fill" />
-        </div>
+        <Image src={img}
+          alt={title}
+          width={400}
+          height={400}
+          className="w-full h-fit object-contain"
+        />
       </div>
     </div>
   );
@@ -57,18 +58,22 @@ export default function ProjectGrid() {
         <ProjectCard
           title="Building zero to one @simplita.ai"
           description="Helping shape Simplita from idea to product — defining the UX, core workflows, and the first usable version of the platform."
+          img="/hp1.svg"
         />
         <ProjectCard
           title="Chapter 1 - A career space for young minds"
           description="Owned end-to-end design of a mobile app for life and career coaching, translating student needs into structured guidance, decision-making tools, and scalable experiences."
+          img="/hp3.svg"
         />
         <ProjectCard
           title="OneTac: Reimagining India's Stories"
           description="Igniting the next wave of tourism, art and cultural experiences through a Community-led, decentralised movement."
+          img="/hp2.svg"
         />
         <ProjectCard
           title="How this portfolio was crafted"
           description="Crafted as a narrative of my design thinking, this portfolio highlights the journey from problem to product. Each project captures the exploration, decisions, and outcomes."
+          img="/hp4.svg"
         />
       </div>
     </section>

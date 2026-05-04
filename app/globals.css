@@ -10,19 +10,25 @@
   --color-brand-green: #134C39;
   --color-brand-green-dark: #0B3D2E;
   --color-hero-green: var(--color-brand-green);
-  
+
   /* Theme-specific Colors */
   --color-hero-gradient-start: #134C39;
   --color-hero-gradient-end: #005237;
-  
+
   /* Base Colors */
   --color-background: #ffffff;
   --color-foreground: #111111;
+
+  /* Breakpoints */
+  --breakpoint-xs: 390px;
+  --breakpoint-xss: 375px;
 }
 
 html {
-  max-width: 100vw;
+  width: 100vw;
+  max-width: 1920px;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 
 body {
@@ -49,4 +55,14 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--color-brand-green-dark);
   border-radius: 10px;
+}
+
+/* Hide scrollbar for element */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

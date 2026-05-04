@@ -12,7 +12,7 @@ interface TestimonialCardProps {
 
 function TestimonialCard({ name, role, content, className }: TestimonialCardProps) {
   return (
-    <div className={`relative p-6 flex flex-col h-[24rem] md:h-[20rem] ${className}`}>
+    <div className={`relative p-6 flex flex-col h-[24rem] ${className}`}>
       <Image src="/paper.svg" alt="Background" fill className="z-0 absolute top-0 left-0 w-full h-full object-cover opacity-90" />
       <Image src="/line5.svg" alt="Background" width={200} height={200} className="absolute -top-1.25 left-0 w-full h-fit object-cover pointer-events-none" />
       <Image src="/line6.svg" alt="Background" width={200} height={200} className="absolute top-0 -left-1.25 w-fit h-full object-cover pointer-events-none" />
@@ -89,8 +89,8 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="relative z-10 py-12 md:py-26 px-4 md:px-8 lg:px-12">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative z-10 py-12 md:py-26 px-4 md:px-8">
+      <div className="mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold mb-2">
           I asked them to give their pov
         </h2>

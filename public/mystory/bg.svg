@@ -1,0 +1,28 @@
+<svg width="661" height="843" viewBox="0 0 661 843" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M18 839.721L656.984 842.205C659.2 842.214 661 840.42 661 838.205V4.2207C661 2.01154 659.209 0.220703 657 0.220703H18C6.03271 -0.421997 1.49194 1.51715 0 12.2207V824.753C0 825.064 0.0369873 825.38 0.11145 825.682C2.89197 836.961 7.43323 839.244 18 839.721Z" fill="#FFF3E1"/>
+<g clip-path="url(#clip0_1310_127674)">
+<rect width="660" height="842" fill="url(#pattern0_1310_127674)" fill-opacity="0.1"/>
+</g>
+<defs>
+<clipPath id="clip0_1310_127674">
+<rect width="660" height="842" fill="white"/>
+</clipPath>
+<pattern id="pattern0_1310_127674" patternUnits="userSpaceOnUse" patternTransform="matrix(80 0 0 80 -0.2 -0.2)" preserveAspectRatio="none" viewBox="-0.5 -0.5 200 200" width="1" height="1">
+<use xlink:href="#pattern0_1310_127674_inner" transform="translate(-200 -200)"/>
+<use xlink:href="#pattern0_1310_127674_inner" transform="translate(0 -200)"/>
+<use xlink:href="#pattern0_1310_127674_inner" transform="translate(-200 0)"/>
+<g id="pattern0_1310_127674_inner">
+<path d="M45 0V200" stroke="black"/>
+<path d="M0 0V200" stroke="black"/>
+<path d="M200 45H-1.43051e-06" stroke="black"/>
+<path d="M200 0H-1.43051e-06" stroke="black"/>
+<path d="M100 0V200" stroke="black"/>
+<path d="M200 100H-1.43051e-06" stroke="black"/>
+<path d="M155 0V200" stroke="black"/>
+<path d="M200 0V200" stroke="black"/>
+<path d="M200 155H-1.43051e-06" stroke="black"/>
+<path d="M200 200H-1.43051e-06" stroke="black"/>
+<path d="M143.321 185.499L144.322 185.375" stroke="#134C39" stroke-width="2" stroke-linecap="round"/>
+</g>
+</pattern></defs>
+</svg>
