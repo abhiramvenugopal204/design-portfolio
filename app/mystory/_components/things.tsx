@@ -113,28 +113,28 @@ export default function Things() {
     ]
 
     return (
-        <>
+        <section className="overflow-hidden">
             {/* section-1: Things that shape how I see the world */}
-            <div className="relative -top-12 flex flex-col py-10 overflow-hidden w-full">
-                <h1 className="px-4 lg:text-2xl font-semibold font-['Kalam'] z-10">
+            <div className="relative -top-10 flex flex-col py-10 overflow-hidden w-full">
+                <h1 className="px-4 text-xl lg:text-2xl font-semibold z-10">
                     Things that shape how I see the world
                 </h1>
 
-                <motion.div 
+                <motion.div
                     animate={{ y: [0, -15, 0], rotate: [-12, -10, -12] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                     className="z-20 absolute top-[22%] md:top-auto md:bottom-[5%] left-[5%] pointer-events-none"
                 >
                     <Image src={f6} alt="f6" width={150} height={150} className="w-fit h-14 md:h-auto" />
                 </motion.div>
-                <motion.div 
+                <motion.div
                     animate={{ y: [0, 10, 0], rotate: [15, 18, 15] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                     className="z-20 absolute top-[40%] md:top-[15%] left-[25%] pointer-events-none"
                 >
                     <Image src={f7} alt="f7" width={180} height={180} className="w-fit h-auto" />
                 </motion.div>
-                <motion.div 
+                <motion.div
                     animate={{ y: [0, -12, 0], rotate: [2, 0, 2] }}
                     transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
                     className="z-20 absolute bottom-[2%] lg:bottom-[10%] left-[10%] md:left-auto md:right-[30%] pointer-events-none"
@@ -166,14 +166,14 @@ export default function Things() {
 
             {/* section-2 */}
             <div className="relative -top-12 md:top-auto py-6 flex flex-col gap-4 px-4">
-                <h1 className="lg:text-2xl font-semibold font-['Kalam'] z-10">
+                <h1 className="text-xl lg:text-2xl font-semibold font-['Kalam'] z-10">
                     here’s some Professional stuff
                 </h1>
 
                 {
                     proStuff.map((item, i) => (
-                        <motion.div 
-                            key={i} 
+                        <motion.div
+                            key={i}
                             initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -227,7 +227,7 @@ export default function Things() {
 
             {/* section-3 */}
             <div className="relative -top-12 md:top-0 mt-10 flex flex-col gap-6">
-                <h1 className="px-4 lg:text-2xl font-semibold font-['Kalam'] z-10">
+                <h1 className="px-4 text-xl lg:text-2xl font-semibold font-['Kalam'] z-10">
                     Now here’s some personal stuff
                 </h1>
 
@@ -324,21 +324,21 @@ export default function Things() {
             </AnimatePresence>
 
             {/* section-4 */}
-            <div className="relative -top-12 md:top-0 mt-10">
-                <h1 className="px-4 lg:text-2xl font-semibold z-10 pb-6">
+            <div className="relative -top-10 md:top-0 mt-10">
+                <h1 className="px-4 text-xl lg:text-2xl font-semibold z-10 pb-6">
                     What i’m exploring this month
                 </h1>
 
                 <div className="flex flex-col md:flex-row gap-6 items-stretch px-4">
                     {[box1, box2].map((box, idx) => (
-                        <div key={idx} className="relative w-full p-4 flex flex-col">
+                        <div key={idx} className="relative w-full p-4 flex flex-col bg-white shadow-lg shadow-gray-200">
                             {/* Top Edge */}
-                            <div className="absolute -top-0.5 left-0 w-full h-2 overflow-hidden z-30">
-                                <Image src="/mystory/lineLong.svg" alt="line" fill className="object-contain" />
+                            <div className="absolute -top-0.5 left-0 w-full h-1 overflow-hidden z-30">
+                                <Image src="/mystory/lineLong.svg" alt="line" fill className="object-cover" />
                             </div>
                             {/* Bottom Edge */}
-                            <div className="absolute -bottom-0.5 left-0 w-full h-2 overflow-hidden z-30">
-                                <Image src="/mystory/lineLong.svg" alt="line" fill className="object-contain" />
+                            <div className="absolute -bottom-0.5 left-0 w-full h-1 overflow-hidden z-30">
+                                <Image src="/mystory/lineLong.svg" alt="line" fill className="object-cover" />
                             </div>
                             {/* Left Edge */}
                             <div className="absolute top-0 left-0 w-1 h-full overflow-hidden z-30">
@@ -349,12 +349,12 @@ export default function Things() {
                                 <Image src="/mystory/line.svg" alt="line" fill className="object-cover" />
                             </div>
 
-                            <div className="border border-gray-600 p-4 flex flex-col justify-center gap-4 flex-grow bg-white/50 backdrop-blur-sm">
+                            <div className="border border-gray-600 rounded-lg p-4 flex flex-col justify-center gap-4 flex-grow bg-white/50 backdrop-blur-sm">
                                 {box.map((item, i) => {
                                     const isChecked = item.img.includes('checked');
                                     return (
-                                        <motion.div 
-                                            key={i} 
+                                        <motion.div
+                                            key={i}
                                             initial={{ opacity: 0, x: -10 }}
                                             whileInView={{ opacity: 1, x: 0 }}
                                             viewport={{ once: true }}
@@ -381,14 +381,14 @@ export default function Things() {
             </div>
 
             {/* section-5 */}
-            <div className="relative p-4 mx-4 mt-0 md:mt-14 mb-8">
+            <div className="relative p-4 mx-4 mt-0 md:mt-14 mb-8 bg-white shadow-lg shadow-gray-200">
                 {/* Top Edge */}
-                <div className="absolute -top-0.5 left-0 w-full h-2 overflow-hidden z-30">
-                    <Image src="/mystory/lineLong.svg" alt="line" fill className="object-contain" />
+                <div className="absolute -top-0.5 left-0 w-full h-1 overflow-hidden z-30">
+                    <Image src="/mystory/lineLong.svg" alt="line" fill className="object-cover" />
                 </div>
                 {/* Bottom Edge */}
-                <div className="absolute -bottom-0.5 left-0 w-full h-2 overflow-hidden z-30">
-                    <Image src="/mystory/lineLong.svg" alt="line" fill className="object-contain" />
+                <div className="absolute -bottom-0.5 left-0 w-full h-1 overflow-hidden z-30">
+                    <Image src="/mystory/lineLong.svg" alt="line" fill className="object-cover" />
                 </div>
                 {/* Left Edge */}
                 <div className="absolute top-0 left-0 w-1 h-full overflow-hidden z-30">
@@ -400,11 +400,7 @@ export default function Things() {
                 </div>
 
                 <div className="relative bg-brand-yellow rounded-2xl lg:rounded-4xl border p-4 text-center flex flex-col gap-2">
-                    <motion.div 
-                        animate={{ y: [0, -8, 0] }}
-                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                        className="z-30 absolute -top-8 right-1/4 translate-x-1/4 w-fit h-30"
-                    >
+                    <div className="z-30 absolute -top-8 right-1/4 translate-x-1/4 w-fit h-30">
                         <Image
                             src="/mystory/cat.svg"
                             alt="cat"
@@ -412,7 +408,7 @@ export default function Things() {
                             width={50}
                             className="object-contain w-full h-full"
                         />
-                    </motion.div>
+                    </div>
                     <p className="z-30 text-lg lg:text-xl font-semibold leading-relaxed">
                         Well that’s some part of the stories! <br />
                         Let’s work on some interesting perspectives <br />
@@ -420,6 +416,6 @@ export default function Things() {
                     </p>
                 </div>
             </div>
-        </>
+        </section>
     )
 }
