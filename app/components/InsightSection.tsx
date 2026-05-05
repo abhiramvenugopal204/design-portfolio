@@ -9,10 +9,10 @@ function NoteItem({ title, subtitle }: NoteItemProps) {
   return (
     <div className="group flex items-center justify-between cursor-pointer">
       <div className="flex flex-col gap-2">
-        <h4 className="text-lg font-bold uppercase tracking-widest transition-all group-hover:translate-x-2">
+        <h4 className="xl:text-lg font-bold uppercase tracking-wide transition-all group-hover:translate-x-2">
           {title}
         </h4>
-        <p className="text-gray-500 font-medium transition-all group-hover:translate-x-2">
+        <p className="text-gray-500 xl:text-md font-medium transition-all group-hover:translate-x-2">
           {subtitle}
         </p>
       </div>

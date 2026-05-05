@@ -23,8 +23,11 @@ import m8 from "../../../public/mystory/m8.svg"
 import m9 from "../../../public/mystory/m9.svg"
 import { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Link from "next/link"
 
 export default function Things() {
+    const email = "abhiramvenugopal204@gmail.com";
+
     const [selectedImage, setSelectedImage] = useState<number | null>(null);
     const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -325,18 +328,18 @@ export default function Things() {
                             <div className="absolute top-0 right-0 w-1 h-full overflow-hidden z-30">
                                 <Image src="/mystory/line.svg" alt="line" fill className="object-cover" />
                             </div>
-                            
+
                             <div className="border border-gray-600 p-4 flex flex-col justify-center gap-4 flex-grow bg-white/50 backdrop-blur-sm">
                                 {box.map((item, i) => {
                                     const isChecked = item.img.includes('checked');
                                     return (
                                         <div key={i} className="flex items-center gap-2 font-semibold text-sm md:text-base leading-tight">
                                             <div className="flex-shrink-0 w-8 flex justify-center mt-0.5">
-                                                <Image 
-                                                    src={item.img} 
-                                                    alt={isChecked ? 'checked' : 'checkbox'} 
-                                                    height={isChecked ? 40 : 20} 
-                                                    width={isChecked ? 40 : 20} 
+                                                <Image
+                                                    src={item.img}
+                                                    alt={isChecked ? 'checked' : 'checkbox'}
+                                                    height={isChecked ? 40 : 20}
+                                                    width={isChecked ? 40 : 20}
                                                     className={`object-contain relative ${isChecked ? 'left-0' : '-left-2'}`}
                                                 />
                                             </div>
@@ -347,6 +350,43 @@ export default function Things() {
                             </div>
                         </div>
                     ))}
+                </div>
+            </div>
+
+            {/* section-5 */}
+            <div className="relative p-4 mx-4 mt-0 md:mt-14 mb-8">
+                {/* Top Edge */}
+                <div className="absolute -top-0.5 left-0 w-full h-2 overflow-hidden z-30">
+                    <Image src="/mystory/lineLong.svg" alt="line" fill className="object-contain" />
+                </div>
+                {/* Bottom Edge */}
+                <div className="absolute -bottom-0.5 left-0 w-full h-2 overflow-hidden z-30">
+                    <Image src="/mystory/lineLong.svg" alt="line" fill className="object-contain" />
+                </div>
+                {/* Left Edge */}
+                <div className="absolute top-0 left-0 w-1 h-full overflow-hidden z-30">
+                    <Image src="/mystory/line.svg" alt="line" fill className="object-cover" />
+                </div>
+                {/* Right Edge */}
+                <div className="absolute top-0 right-0 w-1 h-full overflow-hidden z-30">
+                    <Image src="/mystory/line.svg" alt="line" fill className="object-cover" />
+                </div>
+
+                <div className="relative bg-brand-yellow rounded-2xl lg:rounded-4xl border p-4 text-center flex flex-col gap-2">
+                    <div className="z-30 absolute -top-8 right-1/4 translate-x-1/4 w-fit h-30">
+                        <Image
+                            src="/mystory/cat.svg"
+                            alt="cat"
+                            height={50}
+                            width={50}
+                            className="object-contain w-full h-full"
+                        />
+                    </div>
+                    <p className="z-30 text-lg lg:text-xl font-semibold leading-relaxed">
+                        Well that’s some part of the stories! <br />
+                        Let’s work on some interesting perspectives <br />
+                        You can find me at <Link href={`mailto:${email}`} className="underline">{email}</Link>
+                    </p>
                 </div>
             </div>
         </>
