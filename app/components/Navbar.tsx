@@ -12,6 +12,23 @@ const NAV_LINKS = [
   { name: "My Story", href: "/mystory" },
 ];
 
+const STORY_IMAGES = [
+  "/mystory/bg.svg",
+  "/mystory/clip.svg",
+  "/mystory/me2.svg",
+  "/mystory/card.svg",
+  "/mystory/q1.svg",
+  "/mystory/q2.svg",
+  "/mystory/circle.svg",
+  "/mystory/me.svg",
+  "/mystory/ticket.svg",
+  "/mystory/f1.svg",
+  "/mystory/f2.svg",
+  "/mystory/f3.svg",
+  "/mystory/f4.svg",
+  "/mystory/f5.svg",
+];
+
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +37,15 @@ export default function Navbar() {
   // Determine the base text color based on the page
   const isWhiteTextPage = pathname === "/" || pathname === "/mystory";
   const textColor = isScrolled ? "text-black" : (isWhiteTextPage ? "text-white" : "text-black");
+
+  const handlePreload = (href: string) => {
+    if (href === "/mystory") {
+      STORY_IMAGES.forEach((src) => {
+        const img = new window.Image();
+        img.src = src;
+      });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,6 +103,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`relative px-4 py-2 text-lg lg:text-xl font-semibold transition-colors duration-300 ${linkColor}`}
+                onMouseEnter={() => handlePreload(link.href)}
               >
                 {link.name}
                 {isActive && (
@@ -142,6 +169,8 @@ export default function Navbar() {
               href={link.href}
               onClick={() => setIsOpen(false)}
               className={`text-4xl font-medium tracking-tight hover:text-brand-yellow transition-colors ${pathname === link.href ? "text-brand-yellow" : "text-white"}`}
+              onMouseEnter={() => handlePreload(link.href)}
+              onTouchStart={() => handlePreload(link.href)}
             >
               {link.name}
             </Link>

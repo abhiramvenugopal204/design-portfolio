@@ -120,24 +120,37 @@ export default function Things() {
                     Things that shape how I see the world
                 </h1>
 
-                <div className="z-20 absolute top-[22%] md:top-auto md:bottom-[5%] left-[5%] rotate-[-12deg] pointer-events-none">
+                <motion.div 
+                    animate={{ y: [0, -15, 0], rotate: [-12, -10, -12] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="z-20 absolute top-[22%] md:top-auto md:bottom-[5%] left-[5%] pointer-events-none"
+                >
                     <Image src={f6} alt="f6" width={150} height={150} className="w-fit h-14 md:h-auto" />
-                </div>
-                <div className="z-20 absolute top-[40%] md:top-[15%] left-[25%] rotate-[15deg] pointer-events-none">
+                </motion.div>
+                <motion.div 
+                    animate={{ y: [0, 10, 0], rotate: [15, 18, 15] }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                    className="z-20 absolute top-[40%] md:top-[15%] left-[25%] pointer-events-none"
+                >
                     <Image src={f7} alt="f7" width={180} height={180} className="w-fit h-auto" />
-                </div>
-                <div className="z-20 absolute bottom-[2%] lg:bottom-[10%] left-[10%] md:left-auto md:right-[30%] rotate-[2deg] pointer-events-none">
+                </motion.div>
+                <motion.div 
+                    animate={{ y: [0, -12, 0], rotate: [2, 0, 2] }}
+                    transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+                    className="z-20 absolute bottom-[2%] lg:bottom-[10%] left-[10%] md:left-auto md:right-[30%] pointer-events-none"
+                >
                     <Image src={f8} alt="f8" width={160} height={160} className="w-fit h-14 md:h-auto" />
-                </div>
+                </motion.div>
 
                 <div className="py-10 md:py-0 w-full bg-brand-yellow md:bg-transparent flex flex-wrap lg:flex-nowrap justify-center items-center px-4 md:px-10 mt-10 relative z-10">
                     {images.map((img, i) => (
-                        <div
+                        <motion.div
                             key={i}
+                            initial={{ opacity: 0, scale: 0.8, rotate: img.rotate }}
+                            whileInView={{ opacity: 1, scale: 1, rotate: img.rotate }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: i * 0.1 }}
                             className="transition-all duration-300 hover:scale-110 hover:z-20"
-                            style={{
-                                transform: `rotate(${img.rotate})`,
-                            }}
                         >
                             <Image
                                 src={img.src}
@@ -146,7 +159,7 @@ export default function Things() {
                                 height={250}
                                 className="w-fit h-auto drop-shadow-md rounded-lg"
                             />
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
@@ -159,7 +172,14 @@ export default function Things() {
 
                 {
                     proStuff.map((item, i) => (
-                        <div key={i} className="relative w-full h-fit md:h-[10rem] flex flex-col md:flex-row justify-start items-center">
+                        <motion.div 
+                            key={i} 
+                            initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: i * 0.2 }}
+                            className="relative w-full h-fit md:h-[10rem] flex flex-col md:flex-row justify-start items-center"
+                        >
                             {/* Top Edge */}
                             <div className="absolute -top-0.5 left-0 w-full h-2 overflow-hidden z-30">
                                 <Image src="/mystory/lineLong.svg" alt="line" fill className="object-contain" />
@@ -200,7 +220,7 @@ export default function Things() {
                                 <h2 className="font-semibold text-2xl xl:text-3xl">{item.title}</h2>
                                 <p className="text-lg">{item.desc}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))
                 }
             </div>
@@ -333,7 +353,14 @@ export default function Things() {
                                 {box.map((item, i) => {
                                     const isChecked = item.img.includes('checked');
                                     return (
-                                        <div key={i} className="flex items-center gap-2 font-semibold text-sm md:text-base leading-tight">
+                                        <motion.div 
+                                            key={i} 
+                                            initial={{ opacity: 0, x: -10 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.3, delay: i * 0.1 }}
+                                            className="flex items-center gap-2 font-semibold text-sm md:text-base leading-tight"
+                                        >
                                             <div className="flex-shrink-0 w-8 flex justify-center mt-0.5">
                                                 <Image
                                                     src={item.img}
@@ -344,7 +371,7 @@ export default function Things() {
                                                 />
                                             </div>
                                             <span className="pt-1.5">{item.content}</span>
-                                        </div>
+                                        </motion.div>
                                     );
                                 })}
                             </div>
@@ -373,7 +400,11 @@ export default function Things() {
                 </div>
 
                 <div className="relative bg-brand-yellow rounded-2xl lg:rounded-4xl border p-4 text-center flex flex-col gap-2">
-                    <div className="z-30 absolute -top-8 right-1/4 translate-x-1/4 w-fit h-30">
+                    <motion.div 
+                        animate={{ y: [0, -8, 0] }}
+                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                        className="z-30 absolute -top-8 right-1/4 translate-x-1/4 w-fit h-30"
+                    >
                         <Image
                             src="/mystory/cat.svg"
                             alt="cat"
@@ -381,7 +412,7 @@ export default function Things() {
                             width={50}
                             className="object-contain w-full h-full"
                         />
-                    </div>
+                    </motion.div>
                     <p className="z-30 text-lg lg:text-xl font-semibold leading-relaxed">
                         Well that’s some part of the stories! <br />
                         Let’s work on some interesting perspectives <br />

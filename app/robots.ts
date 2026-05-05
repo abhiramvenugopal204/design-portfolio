@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://abhishekportfolio.com/sitemap.xml", // Replace with your final domain
+    sitemap: "https://www.abhiramvgp.com/sitemap.xml", // Replace with your final domain
   };
 }

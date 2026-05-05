@@ -40,18 +40,41 @@ const data = [
 
 export function Story() {
     return (
-        <div className="relative -top-[8rem] w-full px-6">
-            <div className="relative overflow-hidden flex flex-col lg:flex-row justify-center gap-2">
-                <div className="absolute top-[49.25%] xss:top-[48.25%] xs:top-[46.5%] lg:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+        <div className="relative -top-[8rem] w-full px-6" style={{ perspective: "2000px" }}>
+            <div className="relative flex flex-col lg:flex-row justify-center gap-2" style={{ transformStyle: "preserve-3d" }}>
+                <div className="absolute top-[49.25%] xss:top-[48.25%] xs:top-[46.5%] md:top-[44.25%] lg:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
                     <Image
                         src={clip}
                         width={64}
                         height={64}
                         alt="Clip"
-                        className="object-contain rotate-90 lg:rotate-0"
+                        className="object-contain w-[24px] xs:w-[28px] md:w-[40px] lg:w-fit rotate-90 lg:rotate-0"
                     />
                 </div>
-                <div className="pb-8 md:pb-0 overflow-hidden flex items-center w-full relative rounded-b-lg rounded-t-xl xl:rounded-l-2xl xl:rounded-r-lg border border-yellow-400 bg-[#FFFBEB]">
+                <motion.div 
+                    initial={{ 
+                        rotateY: -20, 
+                        rotateX: 0,
+                        originX: "100%",
+                        originY: "50%"
+                    }}
+                    whileInView={{ 
+                        rotateY: 0,
+                        rotateX: 0
+                    }}
+                    whileHover={{ 
+                        rotateY: -5,
+                        transition: { duration: 0.3 }
+                    }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ 
+                        type: "spring", 
+                        stiffness: 50, 
+                        damping: 20,
+                        delay: 0.1
+                    }}
+                    className="pb-6 md:pb-0 overflow-hidden flex items-center w-full relative rounded-b-lg rounded-t-xl xl:rounded-l-2xl xl:rounded-r-lg border border-yellow-400 bg-[#FFFBEB] shadow-[-20px_20px_50px_rgba(0,0,0,0.1)]"
+                >
                     <Image
                         src={bg}
                         alt="Story Background"
@@ -76,8 +99,31 @@ export function Story() {
                             Whether you’re looking to <b className="text-brand-yellow">hire</b>, <b className="text-brand-yellow">network</b>, or just wondering why there’s so much <b className="text-brand-yellow">yellow</b> here, I’m always happy to connect.
                         </p>
                     </div>
-                </div>
-                <div className="pt-6 md:pt-0 overflow-hidden w-full relative rounded-b-xl rounded-t-lg xl:rounded-r-2xl xl:rounded-l-lg border border-yellow-400 bg-[#FFFBEB]">
+                </motion.div>
+                <motion.div 
+                    initial={{ 
+                        rotateY: 20, 
+                        rotateX: 0,
+                        originX: "0%",
+                        originY: "50%"
+                    }}
+                    whileInView={{ 
+                        rotateY: 0,
+                        rotateX: 0
+                    }}
+                    whileHover={{ 
+                        rotateY: 5,
+                        transition: { duration: 0.3 }
+                    }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ 
+                        type: "spring", 
+                        stiffness: 50, 
+                        damping: 20,
+                        delay: 0.1
+                    }}
+                    className="pt-2 md:pt-0 overflow-hidden w-full relative rounded-b-xl rounded-t-lg xl:rounded-r-2xl xl:rounded-l-lg border border-yellow-400 bg-[#FFFBEB] shadow-[20px_20px_50px_rgba(0,0,0,0.1)]"
+                >
                     <Image
                         src={bg}
                         alt="Story Background"
@@ -201,7 +247,7 @@ export function Story() {
                             </motion.div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     );

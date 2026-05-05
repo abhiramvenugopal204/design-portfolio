@@ -2,7 +2,7 @@ import { PROJECTS } from "./projects/data";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://abhishekportfolio.com"; // Replace with your final domain
+  const baseUrl = "https://www.abhiramvgp.com"; // Replace with your final domain
 
   // Static routes
   const staticRoutes = ["", "/projects", "/mystory", "/contact"].map((route) => ({

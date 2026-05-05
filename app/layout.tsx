@@ -19,7 +19,10 @@ const kalam = Kalam({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://abhiramvenugopal.com"), // Update this with your final domain
+  metadataBase: new URL("https://www.abhiramvgp.com"),
+  alternates: {
+    canonical: "https://www.abhiramvgp.com",
+  },
   title: "Abhiram Venugopal | Product Designer & Interaction Specialist",
   description: "Portfolio of Abhiram Venugopal, a Product Designer based in Bangalore specializing in high-fidelity interactive experiences and digital products.",
   keywords: ["Product Design", "UX/UI", "Interaction Design", "Portfolio", "Bangalore", "Front-end Development", "Next.js", "Framer Motion", "Case Studies"],
@@ -28,18 +31,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://abhiramvenugopal.com",
+    url: "https://www.abhiramvgp.com",
     title: "Abhiram Venugopal | Product Designer",
     description: "Building high-fidelity interactive experiences and digital products.",
     siteName: "Abhiram Venugopal Portfolio",
-    images: ["https://abhiram-s-portfolio-umber.vercel.app/icon0.svg"],
+    images: ["https://abhiramvgp.com/icon0.svg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Abhiram Venugopal | Product Designer",
     description: "Building high-fidelity interactive experiences and digital products.",
     creator: "@Abhiram Venugopal",
-    images: ["https://abhiram-s-portfolio-umber.vercel.app/icon0.svg"],
+    images: ["https://abhiramvgp.com/icon0.svg"],
   },
   robots: {
     index: true,
