@@ -18,6 +18,9 @@ import l3 from "../../../public/mystory/I3.svg"
 import l4 from "../../../public/mystory/I4.svg"
 import c1 from "../../../public/mystory/c1.svg"
 import c2 from "../../../public/mystory/c2.svg"
+import c11 from "../../../public/mystory/c11.svg"
+import c22 from "../../../public/mystory/c22.svg"
+import styles from "./story.module.css"
 
 const data = [
     {
@@ -26,23 +29,77 @@ const data = [
     },
     {
         icon: l2,
-        chat: c2
+        chat: c11
     },
     {
         icon: l3,
-        chat: c1
+        chat: c2
     },
     {
         icon: l4,
-        chat: c2
+        chat: c22
     }
 ]
 
+function StoryIconItem({ item, index, total }: { item: any, index: number, total: number }) {
+    const [isHovered, setIsHovered] = useState(false);
+
+    // Refined alignment to prevent overlapping neighbors
+    let alignmentClass = "left-1/2 -translate-x-1/2";
+    if (index === 0) alignmentClass = "left-0";
+    if (index === 1) alignmentClass = "left-3 md:left-[20%]";
+    if (index === 2) alignmentClass = "";
+    if (index === total - 1) alignmentClass = "-right-8 md:-right-20";
+
+    return (
+        <div
+            className="relative flex flex-col items-center"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <AnimatePresence>
+                {isHovered && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.9 }}
+                        transition={{ duration: 0.2 }}
+                        className={`absolute bottom-full ${alignmentClass} mb-2 z-50 pointer-events-none w-max max-w-[240px] md:max-w-[320px]`}
+                    >
+                        <div className="relative">
+                            <Image
+                                src={item.chat}
+                                width={380}
+                                height={120}
+                                alt="chat"
+                                className="object-contain drop-shadow-md"
+                            />
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            <motion.div
+                whileHover={{ scale: 1.08 }}
+                className={`${styles.icon} relative flex items-center justify-center cursor-pointer`}
+            >
+                <Image
+                    src={item.icon}
+                    width={64}
+                    height={64}
+                    alt="icon"
+                    className="object-contain w-full h-full"
+                />
+            </motion.div>
+        </div>
+    );
+}
+
 export function Story() {
     return (
-        <div className="relative -top-[8rem] w-full px-6" style={{ perspective: "2000px" }}>
-            <div className="relative flex flex-col lg:flex-row justify-center gap-2" style={{ transformStyle: "preserve-3d" }}>
-                <div className="absolute top-[49.25%] xss:top-[48.25%] xs:top-[46.5%] md:top-[44.25%] lg:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+        <div className="relative -top-[8rem] w-full px-6">
+            <div className="relative flex flex-col lg:flex-row justify-center gap-2">
+                <div className={styles.clip}>
                     <Image
                         src={clip}
                         width={64}
@@ -51,38 +108,23 @@ export function Story() {
                         className="object-contain w-[24px] xs:w-[28px] md:w-[40px] lg:w-fit rotate-90 lg:rotate-0"
                     />
                 </div>
-                <motion.div 
-                    initial={{ 
-                        rotateY: -20, 
-                        rotateX: 0,
-                        originX: "100%",
-                        originY: "50%"
-                    }}
-                    whileInView={{ 
-                        rotateY: 0,
-                        rotateX: 0
-                    }}
-                    whileHover={{ 
-                        rotateY: -5,
-                        transition: { duration: 0.3 }
-                    }}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.2 }}
-                    transition={{ 
-                        type: "spring", 
-                        stiffness: 50, 
-                        damping: 20,
-                        delay: 0.1
-                    }}
-                    className="pb-6 md:pb-0 overflow-hidden flex items-center w-full relative rounded-b-lg rounded-t-xl xl:rounded-l-2xl xl:rounded-r-lg border border-yellow-400 bg-[#FFFBEB] shadow-[-20px_20px_50px_rgba(0,0,0,0.1)]"
+                    transition={{ duration: 0.5 }}
+                    className="pb-6 md:pb-0 flex items-center w-full relative rounded-b-lg rounded-t-xl xl:rounded-l-2xl xl:rounded-r-lg border border-yellow-400 bg-[#FFFBEB] shadow-[-20px_20px_50px_rgba(0,0,0,0.05)]"
                 >
-                    <Image
-                        src={bg}
-                        alt="Story Background"
-                        width={100}
-                        height={100}
-                        className="absolute inset-0 object-cover w-full h-full"
-                    />
-                    <div className="relative p-4 flex flex-col items-end gap-4 h-fit">
+                    <div className="absolute inset-0 overflow-hidden rounded-b-lg rounded-t-xl xl:rounded-l-2xl xl:rounded-r-lg pointer-events-none">
+                        <Image
+                            src={bg}
+                            alt="Story Background"
+                            width={100}
+                            height={100}
+                            className="absolute inset-0 object-cover w-full h-full"
+                        />
+                    </div>
+                    <div className="relative z-20 p-4 flex flex-col items-end gap-4 h-fit">
                         <p className="font-semibold md:text-xl 2xl:text-2xl w-full text-left">Something worth building? I’m in.</p>
                         <div className="w-fit h-fit lg:h-[18rem] xl:h-full">
                             <Image
@@ -100,38 +142,23 @@ export function Story() {
                         </p>
                     </div>
                 </motion.div>
-                <motion.div 
-                    initial={{ 
-                        rotateY: 20, 
-                        rotateX: 0,
-                        originX: "0%",
-                        originY: "50%"
-                    }}
-                    whileInView={{ 
-                        rotateY: 0,
-                        rotateX: 0
-                    }}
-                    whileHover={{ 
-                        rotateY: 5,
-                        transition: { duration: 0.3 }
-                    }}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.2 }}
-                    transition={{ 
-                        type: "spring", 
-                        stiffness: 50, 
-                        damping: 20,
-                        delay: 0.1
-                    }}
-                    className="pt-2 md:pt-0 overflow-hidden w-full relative rounded-b-xl rounded-t-lg xl:rounded-r-2xl xl:rounded-l-lg border border-yellow-400 bg-[#FFFBEB] shadow-[20px_20px_50px_rgba(0,0,0,0.1)]"
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    className="pt-2 md:pt-0 pb-8 md:pb-0 w-full relative rounded-b-xl rounded-t-lg xl:rounded-r-2xl xl:rounded-l-lg border border-yellow-400 bg-[#FFFBEB] shadow-[20px_20px_50px_rgba(0,0,0,0.05)]"
                 >
-                    <Image
-                        src={bg}
-                        alt="Story Background"
-                        width={100}
-                        height={100}
-                        className="absolute inset-0 object-cover w-full h-full"
-                    />
-                    <div className="relative flex gap-8 flex-col justify-center w-full h-full px-4 md:px-6 xl:pl-14 py-6">
+                    <div className="absolute inset-0 overflow-hidden rounded-b-xl rounded-t-lg xl:rounded-r-2xl xl:rounded-l-lg pointer-events-none">
+                        <Image
+                            src={bg}
+                            alt="Story Background"
+                            width={100}
+                            height={100}
+                            className="absolute inset-0 object-cover w-full h-full"
+                        />
+                    </div>
+                    <div className="relative z-20 flex gap-8 flex-col justify-center w-full h-full px-4 md:px-6 xl:pl-14 py-6">
                         <div className="flex flex-col lg:flex-row gap-4 item-center justify-center">
                             <Image
                                 src={card}
@@ -183,59 +210,18 @@ export function Story() {
                                 className="w-full h-fit"
                             />
                         </div>
-                        <div className="relative md:top-6 lg:top-2 flex flex-col lg:flex-row gap-4 md:gap-6 items-center justify-between">
+                        <div
+                            className="relative z-30 md:top-6 lg:top-2 flex flex-col lg:flex-row gap-4 md:gap-6 items-center justify-between"
+                        >
                             <div className="flex gap-2 md:px-2 justify-between w-full flex-1">
-                                {data.map((item, index) => {
-                                    const [isHovered, setIsHovered] = useState(false);
-                                    return (
-                                        <div
-                                            key={index}
-                                            className="relative flex flex-col items-center"
-                                            onMouseEnter={() => setIsHovered(true)}
-                                            onMouseLeave={() => setIsHovered(false)}
-                                        >
-                                            <AnimatePresence>
-                                                {isHovered && (
-                                                    <motion.div
-                                                        initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                                                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                                                        exit={{ opacity: 0, y: 10, scale: 0.9 }}
-                                                        transition={{ duration: 0.2 }}
-                                                        className="absolute bottom-full left-0 z-50 pointer-events-none w-max max-w-[400px]"
-                                                    >
-                                                        <div className="relative">
-                                                            <Image
-                                                                src={item.chat}
-                                                                width={380}
-                                                                height={120}
-                                                                alt="chat"
-                                                                className="object-contain drop-shadow-md"
-                                                            />
-                                                        </div>
-                                                    </motion.div>
-                                                )}
-                                            </AnimatePresence>
-
-                                            <motion.div
-                                                whileHover={{ scale: 1.08 }}
-                                                className="relative w-fit h-fit flex items-center justify-center"
-                                            >
-                                                <Image
-                                                    src={item.icon}
-                                                    width={64}
-                                                    height={64}
-                                                    alt="icon"
-                                                    className="object-contain w-fit h-fit"
-                                                />
-                                            </motion.div>
-                                        </div>
-                                    );
-                                })}
+                                {data.map((item, index) => (
+                                    <StoryIconItem key={index} index={index} total={data.length} item={item} />
+                                ))}
                             </div>
 
                             <motion.div
                                 whileHover={{ rotate: 1, scale: 1.02 }}
-                                className="relative flex-[0.5] h-fit flex items-center justify-center"
+                                className="hidden lg:block relative flex-[0.5] h-fit flex items-center justify-center"
                             >
                                 <Image
                                     src={ticket}
@@ -249,6 +235,16 @@ export function Story() {
                     </div>
                 </motion.div>
             </div>
-        </div>
+
+            <div className="block lg:hidden w-[60%] md:w-[40%] mx-auto relative -top-10 flex-[0.5] h-fit flex items-center justify-center pointer-events-none">
+                <Image
+                    src={ticket}
+                    width={240}
+                    height={120}
+                    alt="ticket"
+                    className="object-contain w-full h-full"
+                />
+            </div>
+        </div >
     );
 }

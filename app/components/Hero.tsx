@@ -108,11 +108,11 @@ export default function Hero() {
         className={styles.socialLinks}
       >
         {[
-          { src: "/linkIcon.svg", alt: "Link" },
+          { src: "/linkIcon.svg", alt: "LinkedIn", href: "https://www.linkedin.com/in/abhiramvgp/" },
           { src: "/mailIcon.svg", alt: "Mail", href: "mailto:abhiramvenugopal204@gmail.com" },
-          { src: "/instaIcon.svg", alt: "Instagram" }
+          { src: "/instaIcon.svg", alt: "Instagram", href: "https://www.instagram.com" }
         ].map((icon, i) => (
-          <Link key={i} href={icon.href || "#"} className={styles.socialLinkItem}>
+          <Link key={i} href={icon.href || "#"} target="_blank" rel="noopener noreferrer" className={styles.socialLinkItem}>
             <Image src={icon.src} alt={icon.alt} width={30} height={30} />
           </Link>
         ))}
@@ -159,6 +159,14 @@ export default function Hero() {
           <Image src="/Frame 1.svg" alt="Team Photo" width={650} height={600} priority className="w-fit h-fit" />
         </motion.div>
       </motion.div>
+
+      <Image 
+        src="/greenLine.svg"
+        alt="green Line"
+        width={280}
+        height={400}
+        className="w-full h-fit absolute -bottom-[1px] md:-bottom-2.5 left-0 z-0"
+      />
     </section>
 
   );

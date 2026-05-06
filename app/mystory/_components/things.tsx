@@ -113,9 +113,9 @@ export default function Things() {
     ]
 
     return (
-        <section className="overflow-hidden">
+        <>
             {/* section-1: Things that shape how I see the world */}
-            <div className="relative -top-10 flex flex-col py-10 overflow-hidden w-full">
+            <div className="relative -top-28 lg:-top-12 flex flex-col py-10 overflow-hidden w-full">
                 <h1 className="px-4 text-xl lg:text-2xl font-semibold z-10">
                     Things that shape how I see the world
                 </h1>
@@ -165,7 +165,7 @@ export default function Things() {
             </div>
 
             {/* section-2 */}
-            <div className="relative -top-12 md:top-auto py-6 flex flex-col gap-4 px-4">
+            <div className="relative -top-12 md:top-auto py-6 flex flex-col gap-4 px-4 overflow-hidden">
                 <h1 className="text-xl lg:text-2xl font-semibold font-['Kalam'] z-10">
                     here’s some Professional stuff
                 </h1>
@@ -226,7 +226,7 @@ export default function Things() {
             </div>
 
             {/* section-3 */}
-            <div className="relative -top-12 md:top-0 mt-10 flex flex-col gap-6">
+            <div className="relative -top-12 md:top-0 mt-10 flex flex-col gap-6 overflow-hidden">
                 <h1 className="px-4 text-xl lg:text-2xl font-semibold font-['Kalam'] z-10">
                     Now here’s some personal stuff
                 </h1>
@@ -324,7 +324,7 @@ export default function Things() {
             </AnimatePresence>
 
             {/* section-4 */}
-            <div className="relative -top-10 md:top-0 mt-10">
+            <div className="relative -top-10 md:top-0 mt-10 overflow-hidden">
                 <h1 className="px-4 text-xl lg:text-2xl font-semibold z-10 pb-6">
                     What i’m exploring this month
                 </h1>
@@ -381,7 +381,7 @@ export default function Things() {
             </div>
 
             {/* section-5 */}
-            <div className="relative p-4 mx-4 mt-0 md:mt-14 mb-8 bg-white shadow-lg shadow-gray-200">
+            <div className="relative p-4 mx-4 mt-0 md:mt-14 mb-8 bg-white shadow-lg shadow-gray-200 overflow-hidden">
                 {/* Top Edge */}
                 <div className="absolute -top-0.5 left-0 w-full h-1 overflow-hidden z-30">
                     <Image src="/mystory/lineLong.svg" alt="line" fill className="object-cover" />
@@ -416,6 +416,6 @@ export default function Things() {
                     </p>
                 </div>
             </div>
-        </section>
+        </>
     )
 }

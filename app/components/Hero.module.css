@@ -1,9 +1,16 @@
 .hero {
   position: relative;
-  overflow-x: clip;
+  overflow: hidden;
   width: 100%;
   min-height: 100vh;
   background: radial-gradient(circle, var(--color-hero-gradient-start) 0%, var(--color-hero-gradient-end) 100%);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    overflow-y: visible;
+    overflow-x: clip;
+  }
 }
 
 .cloud1 {
@@ -51,7 +58,7 @@
 
 .mainHeading {
   position: absolute;
-  top: 8rem;
+  top: 6rem;
   left: 1rem;
   color: white;
   font-size: 2.5rem;
@@ -121,17 +128,27 @@
 
 .socialLinks {
   position: absolute;
-  display: none;
-  bottom: 3.75rem;
-  left: 4rem;
+  display: flex;
+  top: 32%;
+  left: 1rem;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   z-index: 20;
+}
+
+@media (min-width: 390px) {
+  .socialLinks {
+    top: 28%;
+  }
 }
 
 @media (min-width: 768px) {
   .socialLinks {
-    display: flex;
+    top: auto;
+    bottom: 3.75rem;
+    left: 4rem;
+    align-items: center;
+    gap: 1.5rem;
   }
 }
 
@@ -148,10 +165,18 @@
 
 .blastContainer {
   position: absolute;
-  top: 35%;
-  right: -2.5rem;
+  top: 28%;
+  right: -4rem;
   z-index: 0;
-  width: 10rem;
+  width: 20rem;
+}
+
+@media (min-width: 390px) {
+  .blastContainer {
+    right: -6rem;
+    top: 25%;
+    width: 22rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -163,8 +188,8 @@
 
 @media (min-width: 1280px) {
   .blastContainer {
-    top: 7.5rem;
-    width: fit-content;
+    top: 7rem;
+    width: 18rem;
   }
 }
 
@@ -178,7 +203,7 @@
 .characterSection {
   position: absolute;
   z-index: 0;
-   bottom: -18%;
+  bottom: -20%;
   right: -5rem;
   width: 25rem;
 }
@@ -186,11 +211,14 @@
 @media (min-width: 390px) {
   .characterSection {
     bottom: -7%;
+    right: -8rem;
+    width: 30rem;
   }
 }
 
 @media (min-width: 768px) {
   .characterSection {
+    z-index: 10;
     right: 0;
     bottom: -12rem;
     width: 35rem;
@@ -206,7 +234,7 @@
 
 @media (min-width: 1024px) {
   .characterSection {
-    right: -3rem;
+    right: 1rem;
     bottom: -20rem;
     width: 30rem;
   }
@@ -214,7 +242,7 @@
 
 @media (min-width: 1280px) {
   .characterSection {
-    bottom: -25rem;
+    bottom: -30rem;
     width: 40rem;
   }
 }

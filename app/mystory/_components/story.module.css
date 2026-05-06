@@ -1,0 +1,68 @@
+.icon {
+    width: 4rem;
+    height: 4rem;
+}
+
+@media (min-width:540px) {
+    .icon {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@media (min-width:768px) {
+    .icon {
+        width: 8rem;
+        height: 8rem;
+        margin-bottom: 4rem;
+    }
+}
+
+@media (min-width:1024px) {
+    .icon {
+        width: fit-content;
+        height: fit-content;
+        margin-bottom: 0;
+    }
+}
+
+.clip {
+    position: absolute;
+    top: 43.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    pointer-events: none;
+}
+
+
+@media (min-width:375px) {
+    .clip {
+        top: 42.75%;
+    }
+}
+
+@media (min-width:390px) {
+    .clip {
+        top: 39.75%;
+    }
+}
+
+@media (min-width:540px) {
+    .clip {
+        top: 38%;
+    }
+}
+
+@media (min-width:768px) {
+    .clip {
+        top: 31.75%;
+    }
+}
+
+@media (min-width:1024px) {
+    .clip {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

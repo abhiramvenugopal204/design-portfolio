@@ -53,9 +53,9 @@ export default function Footer() {
           <div className="flex flex-col gap-4 relative">
             <h5 suppressHydrationWarning className="text-brand-yellow font-black uppercase tracking-widest">India - {new Date().toLocaleTimeString('en-In', { hour: 'numeric', minute: 'numeric', hour12: true, timeZone: 'Asia/Kolkata' })}</h5>
             <div className="flex flex-col gap-2">
-              <Link href="#" className="hover: transition-all">Dribbble</Link>
-              <Link href="#" className="hover: transition-all">Instagram</Link>
-              <Link href="#" className="hover: transition-all">LinkedIn</Link>
+              <Link href="https://dribbble.com/abhiramvgp" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-all">Dribbble</Link>
+              <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-all">Instagram</Link>
+              <Link href="https://www.linkedin.com/in/abhiramvgp/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-all">LinkedIn</Link>
             </div>
           </div>
         </div>

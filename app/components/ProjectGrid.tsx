@@ -10,26 +10,29 @@ interface ProjectCardProps {
 
 function ProjectCard({ title, description, img, className }: ProjectCardProps) {
   return (
-    <div className={`relative p-6 bg-brand-yellow w-full h-full flex flex-col items-center justify-end ${className}`}>
+    <div className={`relative p-8 bg-brand-yellow w-full flex flex-col gap-8 ${className || ""}`}>
       <Image src="/line1.svg" alt={title} width={400} height={400} className="absolute -top-1.5 left-0 w-full h-fit object-fill" />
       <Image src="/line2.svg" alt={title} width={400} height={400} className="absolute top-0 -left-1.5 w-fit h-full object-fill" />
       <Image src="/line1.svg" alt={title} width={400} height={400} className="absolute -bottom-1.5 right-0 w-full h-fit object-fill" />
       <Image src="/line2.svg" alt={title} width={400} height={400} className="absolute bottom-0 -right-1.5 w-fit h-full object-fill" />
 
-      <Image src="/case.svg" alt={title} width={400} height={400} className="block md:hidden absolute -top-2 -right-4 w-fit h-[3em] rotate-25 object-fill" />
+      <Image src="/case.svg" alt="" width={100} height={100} className="block md:hidden absolute -top-2 -right-4 w-fit h-[3em] rotate-25 object-contain pointer-events-none" />
 
-      <div className="z-10 flex flex-col gap-4 relative ">
-        <h3 className="text-xl md:text-2xl font-bold">
+      <div className="z-10 flex flex-col gap-4 relative flex-1">
+        <h3 className="text-xl md:text-2xl font-bold leading-tight">
           {title}
         </h3>
-        <p className="text-md md:text-lg font-medium">
+        <p className="text-md md:text-lg font-medium opacity-90">
           {description}
         </p>
+      </div>
+
+      <div className="relative z-10 w-full mt-auto">
         <Image src={img}
           alt={title}
           width={400}
-          height={400}
-          className="w-full h-fit object-contain"
+          height={300}
+          className="w-full h-auto object-contain"
         />
       </div>
     </div>
