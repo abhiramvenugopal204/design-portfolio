@@ -34,7 +34,7 @@ export default function Footer() {
                   className="absolute -left-2 -top-1 w-[calc(100%+16px)] h-[calc(100%+8px)] object-stretch -z-10"
                 />
               </Link>
-              <Link href="mailto:hello@abhishekdesign.com" className="flex items-center gap-2 text-sm md:text-base hover:text-brand-yellow transition-colors">
+              <Link href="mailto:abhiramvenugopal204@gmail.com" className="flex items-center gap-2 text-sm md:text-base hover:text-brand-yellow transition-colors">
                 Drop an email
                 <Image src="/arrow.svg" alt="Arrow" width={15} height={15} />
               </Link>

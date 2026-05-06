@@ -20,18 +20,18 @@
   --color-foreground: #111111;
 
   /* Breakpoints */
-  --breakpoint-xs: 390px;
   --breakpoint-xss: 375px;
+  --breakpoint-xs: 390px;
 }
 
 html {
   width: 100vw;
   max-width: 1920px;
-  overflow-x: hidden;
   margin: 0 auto;
 }
 
 body {
+  overflow-x: hidden;
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans);
@@ -63,6 +63,8 @@ body {
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
