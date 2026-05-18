@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 A [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+=======
+# design-portfolio
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+>>>>>>> 57dea86eb97dc6c30821e505faa256c37df95a2c
 
 ## Getting Started
 
@@ -35,7 +41,10 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 > > > > > > > ae7145e (Initial commit from Create Next App)
 > > > > > > > adwaith
+=======
+>>>>>>> 57dea86eb97dc6c30821e505faa256c37df95a2c
