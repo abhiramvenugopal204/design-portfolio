@@ -53,7 +53,7 @@ export default function ProjectGrid() {
         <h2 className="text-2xl font-bold">
           From crafting experiences to solving problems
         </h2>
-        <Link href="/projects" className="hidden md:block">
+        {/* <Link href="/projects" className="hidden md:block">
           <Image
             src="/viewAll.svg"
             alt="View All"
@@ -61,7 +61,7 @@ export default function ProjectGrid() {
             height={40}
             className="w-full h-14 cursor-pointer hover:opacity-80 transition-all"
           />
-        </Link>
+        </Link> */}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 md:gap-x-6 gap-y-4 md:gap-y-6">
