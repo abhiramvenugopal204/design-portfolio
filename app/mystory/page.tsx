@@ -10,8 +10,8 @@ export default function Mystory() {
             <section id="home" className="px-4 flex justify-center relative overflow-hidden md:overflow-visible w-full  bg-[radial-gradient(circle,_var(--color-hero-gradient-start)_0%,_var(--color-hero-gradient-end)_100%)]">
                 {/* Main Heading */}
                 <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="py-50 text-white text-4xl md:text-6xl xl:text-8xl font-serif leading-[1.1] tracking-tight z-20"
                 >

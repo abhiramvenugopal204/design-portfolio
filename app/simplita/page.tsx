@@ -2,6 +2,9 @@ import React from "react";
 import Image from "next/image";
 import ScrollableImageGallery from "../components/ScrollableImageGallery";
 
+/* 5 sections
+view project */
+
 export default function SimplitaCaseStudy() {
   return (
     <div className="min-h-screen bg-brand-yellow">

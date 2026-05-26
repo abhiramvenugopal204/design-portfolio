@@ -65,8 +65,8 @@ export default function Hero() {
 
       {/* Main Heading */}
       <motion.h1
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={styles.mainHeading}
       >
@@ -110,7 +110,7 @@ export default function Hero() {
         {[
           { src: "/linkIcon.svg", alt: "LinkedIn", href: "https://www.linkedin.com/in/abhiramvgp/" },
           { src: "/mailIcon.svg", alt: "Mail", href: "mailto:abhiramvenugopal204@gmail.com" },
-          { src: "/instaIcon.svg", alt: "Instagram", href: "https://www.instagram.com" }
+          { src: "/dribbleIcon.svg", alt: "Instagram", href: "https://dribbble.com/abhiramvgp" }
         ].map((icon, i) => (
           <Link key={i} href={icon.href || "#"} target="_blank" rel="noopener noreferrer" className={styles.socialLinkItem}>
             <Image src={icon.src} alt={icon.alt} width={30} height={30} />

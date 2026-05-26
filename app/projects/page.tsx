@@ -1,25 +1,13 @@
 "use client";
 
-<<<<<<< HEAD
-import { useState, useRef, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
-=======
 import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
->>>>>>> 57dea86eb97dc6c30821e505faa256c37df95a2c
 
 import { PROJECTS } from "./data";
 
 export default function Projects() {
-<<<<<<< HEAD
-    const [selectedIndex, setSelectedIndex] = useState(0);
-    const containerRef = useRef<HTMLDivElement>(null);
-    const activeProject = PROJECTS[selectedIndex];
-=======
     const [activeIndex, setActiveIndex] = useState(0);
     const containerRef = useRef<HTMLDivElement>(null);
 
@@ -35,22 +23,6 @@ export default function Projects() {
 
         if (newIndex !== activeIndex) {
             setActiveIndex(newIndex);
-        }
-    });
->>>>>>> 57dea86eb97dc6c30821e505faa256c37df95a2c
-
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start start", "end end"]
-    });
-
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        const index = Math.min(
-            Math.floor(latest * PROJECTS.length),
-            PROJECTS.length - 1
-        );
-        if (index >= 0 && index !== selectedIndex) {
-            setSelectedIndex(index);
         }
     });
 
@@ -128,34 +100,6 @@ export default function Projects() {
                 </p>
             </div>
 
-<<<<<<< HEAD
-            <div ref={containerRef} style={{ height: `${PROJECTS.length * 80}vh` }} className="relative">
-                <div id='projectsList' className="sticky top-20 md:top-6 px-4 py-12 flex flex-col lg:flex-row gap-8 items-start lg:items-center justify-between lg:min-h-screen">
-                    <div className="flex flex-col flex-1 h-fit lg:justify-between gap-y-3">
-                        {PROJECTS.map((project, index) => (
-                            <button
-                                key={project.id}
-                                onClick={() => setSelectedIndex(index)}
-                                className={`group flex items-start gap-4 text-left transition-all duration-300 cursor-pointer ${selectedIndex === index
-                                    ? "scale-105 opacity-100"
-                                    : "opacity-40 hover:opacity-70 hover:translate-x-2"
-                                    }`}
-                            >
-                                <span className="text-xs md:text-sm font-medium italic mt-1">{project.id}</span>
-                                <h3 className={`text-xl md:text-2xl font-bold font-sans italic leading-tight ${selectedIndex === index ? "text-black" : "text-gray-500"
-                                    }`}>
-                                    {project.name}
-                                </h3>
-                            </button>
-                        ))}
-
-                        {/* Tags at the bottom of sidebar on desktop */}
-                        <div className="hidden lg:flex flex-wrap gap-3 mt-16">
-                            {activeProject.tags.map(tag => (
-                                <span
-                                    key={tag}
-                                    className="px-5 py-2 border border-black/20 rounded-xl text-sm font-medium italic bg-white/50 shadow-sm"
-=======
             {/* The ref is placed on this relative container */}
             <div ref={containerRef} className="px-4 my-20 relative flex flex-col lg:flex-row justify-between lg:gap-12 max-w-[1400px] mx-auto items-start">
 
@@ -193,71 +137,11 @@ export default function Projects() {
                                 <span
                                     key={tag}
                                     className="px-4 py-2 border border-gray-200 rounded-xl text-[15px] bg-white text-black font-serif italic shadow-[0_2px_8px_rgba(0,0,0,0.08)] shrink-0 whitespace-nowrap"
->>>>>>> 57dea86eb97dc6c30821e505faa256c37df95a2c
                                 >
                                     {tag}
                                 </span>
                             ))}
                         </div>
-<<<<<<< HEAD
-                    </div>
-
-                    <div className="hidden flex-1 xl:block w-full h-[600px] max-w-lg relative overflow-hidden">
-                        {PROJECTS.map((project, index) => (
-                            <motion.div
-                                key={project.id}
-                                className="absolute inset-0 flex items-center justify-center bg-white overflow-hidden"
-                                style={{ zIndex: PROJECTS.length - index }}
-                                animate={{
-                                    y: selectedIndex > index ? "-100%" : "0%",
-                                }}
-                                transition={{
-                                    duration: 0.8,
-                                    ease: [1, 1, 1, 1]
-                                }}
-                            >
-                                <Image
-                                    src={project.image}
-                                    alt={project.name}
-                                    width={600}
-                                    height={600}
-                                    className="w-full h-full object-contain p-4 drop-shadow-xl"
-                                />
-                            </motion.div>
-                        ))}
-                    </div>
-
-                    <div className="flex flex-1 flex-col gap-8 h-fit text-right items-end justify-between">
-                        <Link
-                            href={`/projects/${activeProject.slug}`}
-                            className="relative z-10 w-fit group"
-                        >
-                            <Image
-                                src="/viewAll2.svg"
-                                alt="Visit Site"
-                                width={120}
-                                height={120}
-                                className="w-auto h-auto transition-transform group-hover:scale-110"
-                            />
-                        </Link>
-
-                        <p className="mt-2 lg:mt-30 text-xl md:text-2xl font-sans italic leading-relaxed text-gray-800 lg:max-w-md animate-in fade-in slide-in-from-right-4 duration-500" key={activeProject.id}>
-                            {activeProject.description}
-                        </p>
-
-                        {/* Tags for mobile view */}
-                        <div className="flex lg:hidden flex-wrap justify-center gap-3 mt-4">
-                            {activeProject.tags.map(tag => (
-                                <span
-                                    key={tag}
-                                    className="px-4 py-1.5 border border-black/20 rounded-lg text-sm font-medium italic"
-                                >
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-=======
                     )}
                 </div>
 
@@ -337,7 +221,6 @@ export default function Projects() {
                             </p>
                         </motion.div>
                     )}
->>>>>>> 57dea86eb97dc6c30821e505faa256c37df95a2c
                 </div>
             </div>
         </div>

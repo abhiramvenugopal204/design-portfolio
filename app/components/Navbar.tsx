@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
@@ -62,15 +63,25 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navClassName = `max-w-[1920px] mx-auto fixed top-0 left-0 right-0 z-50 backdrop-blur-[1px] flex items-center justify-between px-6 lg:px-8 py-4 md:py-6 ${
+        isOpen ? 'bg-transparent shadow-none' : (
+          isWhiteTextPage && !isScrolled ? 'bg-gradient-to-b from-black/25 to-transparent' : 'bg-transparent'
+        )
+      }`;
+
   return (
     <>
-      <nav
-        className={`max-w-[1920px] mx-auto fixed top-0 left-0 right-0 z-50 backdrop-blur-[1px] flex items-center justify-between px-6 lg:px-8 py-4 md:py-6 transition-all duration-300 bg-gradient-to-b from-black/25 to-transparent
-          } ${isOpen ? 'bg-transparent shadow-none' : ''} ${(isScrolled || !isWhiteTextPage) ? 'bg-gradient-to-b from-white to-transparent' : ''}`}
+      <motion.nav
+        layout
+        transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
+        className={navClassName}
       >
         {/* Logo Section */}
-        <div className={`flex items-center gap-3 transition-colors duration-300 ${textColor}`}>
-          <Link href="/" className={`w-10 h-10 lg:w-12 lg:h-12 rounded-full border flex items-center justify-center overflow-hidden transition-all hover:scale-105 ${isScrolled ? 'border-black/10 bg-black/5' : (isWhiteTextPage ? 'border-white/20' : 'border-black/20')
+        <motion.div 
+          layout 
+          className={`flex items-center gap-3 transition-colors duration-300 ${textColor}`}
+        >
+          <Link href="/" className={`w-10 h-10 lg:w-12 lg:h-12 rounded-full border flex shrink-0 items-center justify-center overflow-hidden transition-all hover:scale-105 ${isScrolled ? 'border-black/10 bg-black/5' : (isWhiteTextPage ? 'border-white/20' : 'border-black/20')
             }`}>
             <Image src="/logo.svg" alt="Logo" width={48} height={48} className="object-cover" />
           </Link>
@@ -79,13 +90,13 @@ export default function Navbar() {
             <span className={`text-xs hidden md:block opacity-80 tracking-tight`}>Bangalore, IN</span>
             <span className={`text-xs block md:hidden opacity-80 tracking-tight`}>Product Designer</span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex items-center gap-2 lg:gap-4">
+        <motion.div layout className={`hidden md:flex items-center gap-2 lg:gap-4`}>
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
-            
+
             // Link color logic
             let linkColor;
             if (isScrolled) {
@@ -102,12 +113,12 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative px-4 py-2 text-lg lg:text-xl font-semibold transition-colors duration-300 ${linkColor}`}
+                className={`relative px-3 py-2 md:px-4 md:py-2 font-semibold transition-colors duration-300 ${linkColor} text-lg lg:text-xl`}
                 onMouseEnter={() => handlePreload(link.href)}
               >
                 {link.name}
                 {isActive && (
-                  <div className="absolute inset-0 -z-10 flex items-center justify-center">
+                  <motion.div layoutId="activeNavBg" className="absolute inset-0 -z-10 flex items-center justify-center">
                     <Image
                       src="/active.svg"
                       alt="Active"
@@ -115,18 +126,21 @@ export default function Navbar() {
                       height={40}
                       className={`w-full h-full object-contain opacity-80`}
                     />
-                  </div>
+                  </motion.div>
                 )}
               </Link>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Desktop Action & Mobile Toggle */}
-        <div className="flex items-center gap-4">
+        <motion.div 
+          layout 
+          className={`flex items-center gap-4`}
+        >
           <Link href="/contact" className={`hidden md:block px-4 text-lg lg:text-xl font-semibold transition-colors underline underline-offset-8 transition-all duration-300 ${isScrolled
-              ? 'text-black hover:text-black/70 decoration-brand-yellow'
-              : (isWhiteTextPage ? 'text-white hover:text-brand-yellow decoration-brand-yellow/30' : 'text-black hover:text-black/70 decoration-brand-yellow')
+            ? 'text-black hover:text-black/70 decoration-brand-yellow'
+            : (isWhiteTextPage ? 'text-white hover:text-brand-yellow decoration-brand-yellow/30' : 'text-black hover:text-black/70 decoration-brand-yellow')
             }`}>
             Reach out
           </Link>
@@ -142,8 +156,8 @@ export default function Navbar() {
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             )}
           </button>
-        </div>
-      </nav>
+        </motion.div>
+      </motion.nav>
 
       {/* Mobile Menu Overlay */}
       <div

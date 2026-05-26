@@ -21,7 +21,7 @@ export default function Footer() {
               Like what you see? <br /> Just drop in a Hello!
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <Link href="/resume.pdf" className="relative group">
+              <Link href="/resume/resume.pdf" target="_blank" rel="noopener noreferrer" className="relative group">
                 <p className="flex items-center gap-2 px-6 py-3 md:px-4 md:py-2 text-sm md:text-base">
                   VIEW MY RESUME
                   <Image src="/arrow.svg" alt="Arrow" width={15} height={15} />

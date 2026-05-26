@@ -32,46 +32,23 @@ export default function ProjectPage() {
             />
           </Link>
 
-          {/* Grid info */}
+          {/* Top Grid Info */}
           <div className="grid grid-cols-2 gap-y-10 gap-x-8 mt-12">
-            {/* Left side info */}
-            <div className="flex flex-col gap-10">
-              <div>
-                <h3 className="text-gray-400 italic text-[16px] mb-1">My Role</h3>
-                <p className="font-semibold text-[16px]">UI/UX Designer</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 italic text-[16px] mb-1">Industry</h3>
-                <p className="font-semibold text-[16px]">Ed-Tech</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 italic text-[16px] mb-1">Challenge</h3>
-                <p className="font-semibold text-[16px]">UI/UX Designer</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 italic text-[16px] mb-1">Impact</h3>
-                <p className="font-semibold text-[16px]">Ed-Tech</p>
-              </div>
+            <div>
+              <h3 className="text-gray-400 italic text-[16px] mb-1">My Role</h3>
+              <p className="font-semibold text-[16px]">Product Designer</p>
             </div>
-
-            {/* Right side info */}
-            <div className="flex flex-col gap-10">
-              <div>
-                <h3 className="text-gray-400 italic text-[16px] mb-1">My Role</h3>
-                <p className="font-semibold text-[16px] leading-snug">1 Product Designer, 3 Developers, 1 Lead Manager</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 italic text-[16px] mb-1">Timeline</h3>
-                <p className="font-semibold text-[16px] leading-snug">January 2026 - April 2026</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 italic text-[16px] mb-1">Solution</h3>
-                <p className="font-semibold text-[16px] leading-snug">1 Product Designer, 3 Developers, 1 Lead Manager</p>
-              </div>
-              <div>
-                <h3 className="text-gray-400 italic text-[16px] mb-1">Learnings</h3>
-                <p className="font-semibold text-[16px] leading-snug">January 2026 - April 2026</p>
-              </div>
+            <div>
+              <h3 className="text-gray-400 italic text-[16px] mb-1">Team</h3>
+              <p className="font-semibold text-[16px] leading-snug">1 Product Designer, 3 Developers, 1 Lead Manager</p>
+            </div>
+            <div>
+              <h3 className="text-gray-400 italic text-[16px] mb-1">Industry</h3>
+              <p className="font-semibold text-[16px]">Ed-Tech</p>
+            </div>
+            <div>
+              <h3 className="text-gray-400 italic text-[16px] mb-1">Timeline</h3>
+              <p className="font-semibold text-[16px] leading-snug">January 2026 - April 2026</p>
             </div>
           </div>
         </div>
@@ -86,6 +63,33 @@ export default function ProjectPage() {
             className="w-full h-auto object-contain"
             priority
           />
+        </div>
+      </div>
+
+      {/* Bottom Grid Info */}
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 mt-16 w-full">
+        {/* Left column info */}
+        <div className="flex flex-col gap-10">
+          <div>
+            <h3 className="text-gray-400 italic text-[16px] mb-1">Challenge</h3>
+            <p className="font-semibold text-[16px]">UI/UX Designer</p>
+          </div>
+          <div>
+            <h3 className="text-gray-400 italic text-[16px] mb-1">Impact</h3>
+            <p className="font-semibold text-[16px]">Ed-Tech</p>
+          </div>
+        </div>
+
+        {/* Right column info */}
+        <div className="flex flex-col gap-10">
+          <div>
+            <h3 className="text-gray-400 italic text-[16px] mb-1">Solution</h3>
+            <p className="font-semibold text-[16px] leading-snug">1 Product Designer, 3 Developers, 1 Lead Manager</p>
+          </div>
+          <div>
+            <h3 className="text-gray-400 italic text-[16px] mb-1">Learnings</h3>
+            <p className="font-semibold text-[16px] leading-snug">January 2026 - April 2026</p>
+          </div>
         </div>
       </div>
     </main>

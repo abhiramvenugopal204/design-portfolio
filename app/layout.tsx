@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Fredericka_the_Great, Kalam } from "next/font/google";
+import { Fredericka_the_Great, Kalam, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import DotGrid from "./components/DotGrid";
 import { Analytics } from "@vercel/analytics/react";
 
 const fredericka = Fredericka_the_Great({
@@ -16,6 +15,12 @@ const kalam = Kalam({
   variable: "--font-kalam",
   subsets: ["latin"],
   weight: ["300", "400", "700"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -58,13 +63,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fredericka.variable} ${kalam.variable} h-full antialiased`}
+      className={`${fredericka.variable} ${kalam.variable} ${montserrat.variable} h-full antialiased`}
     >
       <head>
         <meta property="og:image" content="https://abhiram-s-portfolio-umber.vercel.app/icon0.svg" />
       </head>
       <body className="min-h-full flex flex-col relative">
-        <DotGrid />
         <Navbar />
         {children}
         <Analytics />
