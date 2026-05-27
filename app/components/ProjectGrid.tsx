@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 function ProjectCard({ title, description, img, className, href }: ProjectCardProps) {
   const content = (
-    <div className={`relative p-8 bg-brand-yellow w-full flex flex-col gap-8 ${className || ""}`}>
+    <div className={`relative p-8 bg-brand-yellow w-full h-full flex flex-col gap-8 ${className || ""}`}>
       <Image src="/line1.svg" alt={title} width={400} height={400} className="absolute -top-1.5 left-0 w-full h-fit object-fill" />
       <Image src="/line2.svg" alt={title} width={400} height={400} className="absolute top-0 -left-1.5 w-fit h-full object-fill" />
       <Image src="/line1.svg" alt={title} width={400} height={400} className="absolute -bottom-1.5 right-0 w-full h-fit object-fill" />
@@ -81,21 +81,18 @@ export default function ProjectGrid() {
           description="Helping shape Simplita from idea to product — defining the UX, core workflows, and the first usable version of the platform."
           img="/hp1.svg"
           href="/simplita"
-          className="md:col-span-2"
         />
         <ProjectCard
           title="Chapter 1 - A career space for young minds"
           description="Owned end-to-end design of a mobile app for life and career coaching, translating student needs into structured guidance, decision-making tools, and scalable experiences."
           img="/hp3.svg"
           href="/chapter1"
-          className="md:col-span-2"
         />
         <ProjectCard
           title="OneTac: Reimagining India's Stories"
           description="Igniting the next wave of tourism, art and cultural experiences through a Community-led, decentralised movement."
           img="/hp2.svg"
           href="/onetac"
-          className="md:col-span-2"
         />
         <ProjectCard
           title="How this portfolio was crafted"
