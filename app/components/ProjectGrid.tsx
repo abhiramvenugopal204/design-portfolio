@@ -20,9 +20,20 @@ function ProjectCard({ title, description, img, className, href }: ProjectCardPr
       <Image src="/case.svg" alt="" width={100} height={100} className="block md:hidden absolute -top-2 -right-4 w-fit h-[3em] rotate-25 object-contain pointer-events-none" />
 
       <div className="z-10 flex flex-col gap-4 relative flex-1">
-        <h3 className="text-xl md:text-2xl font-bold leading-tight">
-          {title}
-        </h3>
+        <div className="flex justify-between items-start gap-4">
+          <h3 className="text-xl md:text-2xl font-bold leading-tight">
+            {title}
+          </h3>
+          <div className="shrink-0">
+            <Image
+              src="/casestudyButton.svg"
+              alt="View Case study"
+              width={140}
+              height={50}
+              className="w-auto h-8 md:h-10 object-contain hover:scale-105 transition-transform"
+            />
+          </div>
+        </div>
         <p className="text-md md:text-lg font-medium opacity-90">
           {description}
         </p>
