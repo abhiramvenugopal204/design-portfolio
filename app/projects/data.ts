@@ -192,7 +192,7 @@ export const PROJECTS: Project[] = [
   },
   */
   {
-    id: "08",
+    id: "07",
     name: "Joyel's portfolio",
     slug: "joyel-portfolio",
     description:
@@ -216,7 +216,7 @@ export const PROJECTS: Project[] = [
     },
   },
   {
-    id: "09",
+    id: "08",
     name: "Ajith's Portfolio",
     slug: "ajith-portfolio",
     description:
