@@ -24,7 +24,7 @@ export default function HeadPop() {
                         <span className="text-[28px] md:text-[45px] font-bold">Let’s work </span>
                         <span className="text-[16px] md:text-[23px] font-bold">on some interesting perspectives</span>
                     </h2>
-                    <p className="text-white text-xs md:text-lg lg:text-xl opacity-95">
+                    <p className="text-white text-[16px] md:text-[23px] font-bold opacity-95">
                         You can find me at{" "}
                         <a href="mailto:abhiramvenugopal204@gmail.com" className="underline hover:text-brand-yellow transition-colors">
                             abhiramvenugopal204@gmail.com
