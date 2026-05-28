@@ -20,8 +20,9 @@ export default function HeadPop() {
                     className="w-full h-auto object-cover"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 pb-12 md:pb-20 z-20" style={{ fontFamily: 'var(--font-kalam)' }}>
-                    <h2 className="text-white text-lg md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 tracking-wide max-w-3xl px-4">
-                        Let’s work on some interesting perspectives
+                    <h2 className="text-white mb-2 md:mb-4 tracking-wide max-w-3xl px-4 leading-normal">
+                        <span className="text-[28px] md:text-[45px] font-bold">Let’s work </span>
+                        <span className="text-[16px] md:text-[23px] font-bold">on some interesting perspectives</span>
                     </h2>
                     <p className="text-white text-xs md:text-lg lg:text-xl opacity-95">
                         You can find me at{" "}
