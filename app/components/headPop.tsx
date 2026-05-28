@@ -19,6 +19,17 @@ export default function HeadPop() {
                     height={400}
                     className="w-full h-auto object-cover"
                 />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 pb-12 md:pb-20 z-20" style={{ fontFamily: 'var(--font-kalam)' }}>
+                    <h2 className="text-white text-lg md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 tracking-wide max-w-3xl px-4">
+                        Let’s work on some interesting perspectives
+                    </h2>
+                    <p className="text-white text-xs md:text-lg lg:text-xl opacity-95">
+                        You can find me at{" "}
+                        <a href="mailto:abhiramvenugopal204@gmail.com" className="underline hover:text-brand-yellow transition-colors">
+                            abhiramvenugopal204@gmail.com
+                        </a>
+                    </p>
+                </div>
                 <motion.div
                     variants={{
                         initial: { y: 60, opacity: 0 },
