@@ -165,6 +165,7 @@ export const PROJECTS: Project[] = [
         "A browser extension and web app that uses LLMs to tag, link, and summarize research materials in real-time.",
     },
   },
+  /*
   {
     id: "07",
     name: "Thestylesanctuary",
@@ -189,6 +190,7 @@ export const PROJECTS: Project[] = [
         "An immersive e-commerce platform with deep brand stories and transparency metrics front-and-center.",
     },
   },
+  */
   {
     id: "08",
     name: "Joyel's portfolio",
