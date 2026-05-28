@@ -108,15 +108,15 @@ export default function Hero() {
         className={styles.socialLinks}
       >
         {[
-          { src: "/linkIcon.svg", alt: "LinkedIn", href: "https://www.linkedin.com/in/abhiramvgp/" },
-          { src: "/mailIcon.svg", alt: "Mail", href: "mailto:abhiramvenugopal204@gmail.com" },
-          { src: "/dribbleIcon.svg", alt: "Instagram", href: "https://dribbble.com/abhiramvgp" }
+          { src: "/linkIcon.svg", alt: "LinkedIn", href: "https://www.linkedin.com/in/abhiramvgp/", width: 30, height: 30 },
+          { src: "/mailIcon.svg", alt: "Mail", href: "mailto:abhiramvenugopal204@gmail.com", width: 30, height: 30 },
+          { src: "/dribbleIcon.svg", alt: "Instagram", href: "https://dribbble.com/abhiramvgp", width: 30, height: 30 },
+          { src: "/Vector.svg", alt: "Medium", href: "https://medium.com/@abhiramvenugopal204", width: 50, height: 30 }
         ].map((icon, i) => (
           <Link key={i} href={icon.href || "#"} target="_blank" rel="noopener noreferrer" className={styles.socialLinkItem}>
-            <Image src={icon.src} alt={icon.alt} width={30} height={30} />
+            <Image src={icon.src} alt={icon.alt} width={icon.width} height={icon.height} />
           </Link>
         ))}
-        <Image src="/Vector.svg" alt="Arrow" width={40} height={40} className={styles.animateBounce} />
       </motion.div>
 
       {/* Blast Illustration */}
