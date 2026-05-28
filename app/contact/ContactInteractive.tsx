@@ -119,7 +119,7 @@ export default function ContactInteractive() {
                             </Link>
 
                             <Link
-                                href="https://www.linkedin.com"
+                                href="https://www.linkedin.com/in/abhiramvgp/"
                                 target="_blank"
                                 className="hover:scale-105 active:scale-95 transition-all group"
                             >
