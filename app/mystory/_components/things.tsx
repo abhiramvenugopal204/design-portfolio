@@ -64,13 +64,15 @@ export default function Things() {
     const proStuff = [
         {
             img: log1,
-            title: "Product Design",
-            desc: "Simplita AI",
+            title: "Product Design Lead",
+            desc: "simplita ai",
+            timeline: "April 2025 -Feb 2026",
         },
         {
             img: log2,
             title: "Design Consultant (Product & Digital Experiences)",
             desc: "Across Early-Stage & Product Teams",
+            timeline: "Feb 2026 - Present",
         },
     ]
 
@@ -217,7 +219,14 @@ export default function Things() {
                                 <div className="absolute top-0 left-0 w-1 h-full overflow-hidden z-30">
                                     <Image src="/mystory/line.svg" alt="line" fill className="object-cover" />
                                 </div>
-                                <h2 className="font-semibold text-2xl xl:text-3xl">{item.title}</h2>
+                                <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2">
+                                    <h2 className="font-semibold text-2xl xl:text-3xl">{item.title}</h2>
+                                    {item.timeline && (
+                                        <span className="font-normal text-[24px] shrink-0" style={{ fontFamily: 'var(--font-kalam)' }}>
+                                            {item.timeline}
+                                        </span>
+                                    )}
+                                </div>
                                 <p className="text-lg">{item.desc}</p>
                             </div>
                         </motion.div>
