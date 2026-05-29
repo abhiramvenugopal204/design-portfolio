@@ -89,7 +89,7 @@ export default function Writings() {
           </span>
         </h1>
         <p className="text-brand-yellow font-semibold md:text-xl" style={{ fontFamily: "var(--font-kalam)" }}>
-          Reflections on design, product, and user behavior
+          (things I write when I’m thinking)
         </p>
       </div>
 
