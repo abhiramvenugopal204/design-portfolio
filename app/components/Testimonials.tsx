@@ -21,24 +21,28 @@ function TestimonialCard({ name, role, content, className, linkedin, instagram }
       <Image src="/line5.svg" alt="Background" width={200} height={200} className="absolute -bottom-1.25 right-0 w-full h-fit object-cover pointer-events-none" />
       <Image src="/line6.svg" alt="Background" width={200} height={200} className="absolute -bottom-0 -right-1.25 w-fit h-full object-cover pointer-events-none" />
 
-      <div className="z-10 flex flex-col h-full">
-        <div className="flex-grow">
-          <p className="text-lg md:text-xl font-medium italic text-gray-800 leading-relaxed mb-6">
-            {content}
-          </p>
+      <div className="z-10 flex flex-col h-full justify-between">
+        <div className="relative w-full h-[65%] rounded-[18px] overflow-hidden border border-black/80">
+          <Image 
+            src="/placeholder.svg" 
+            alt="Placeholder" 
+            fill 
+            className="object-cover" 
+          />
         </div>
-        <div className="flex items-start justify-between gap-4">
+
+        <div className="flex items-center justify-between gap-4 mt-auto pt-2">
           <div className="flex flex-col">
             <h4 className="text-lg font-bold text-gray-900 leading-tight">{name}</h4>
-            <p className="text-sm font-medium text-gray-600 mt-1">{role}</p>
+            <p className="text-sm font-medium text-gray-600 mt-1 max-w-[180px] leading-snug">{role}</p>
           </div>
           {linkedin && (
-            <a href={linkedin} target="_blank" rel="noopener noreferrer" className="shrink-0 mt-0.5 transition-all duration-300 hover:scale-105 hover:opacity-90">
+            <a href={linkedin} target="_blank" rel="noopener noreferrer" className="shrink-0 transition-all duration-300 hover:scale-105 hover:opacity-90">
               <Image src="/linkedinlogo.svg" alt="LinkedIn" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)]" />
             </a>
           )}
           {instagram && (
-            <a href={instagram} target="_blank" rel="noopener noreferrer" className="shrink-0 mt-0.5 transition-all duration-300 hover:scale-105 hover:opacity-90">
+            <a href={instagram} target="_blank" rel="noopener noreferrer" className="shrink-0 transition-all duration-300 hover:scale-105 hover:opacity-90">
               <Image src="/instalogo.svg" alt="Instagram" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)]" />
             </a>
           )}
