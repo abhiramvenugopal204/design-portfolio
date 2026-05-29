@@ -4,11 +4,12 @@ import Link from "next/link";
 interface NoteItemProps {
   title: string;
   subtitle: string;
+  href: string;
 }
 
-function NoteItem({ title, subtitle }: NoteItemProps) {
+function NoteItem({ title, subtitle, href }: NoteItemProps) {
   return (
-    <div className="group flex items-center justify-between cursor-pointer">
+    <Link href={href} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between cursor-pointer">
       <div className="flex flex-col gap-2">
         <h4 className="xl:text-lg font-bold uppercase tracking-wide transition-all group-hover:translate-x-2">
           {title}
@@ -17,8 +18,8 @@ function NoteItem({ title, subtitle }: NoteItemProps) {
           {subtitle}
         </p>
       </div>
-      <Image src="/arrow.svg" alt="Arrow" width={60} height={60} className="" />
-    </div>
+      <Image src="/arrow.svg" alt="Arrow" width={60} height={60} className="transform group-hover:translate-x-2 transition-transform duration-300" />
+    </Link>
   );
 }
 
@@ -32,12 +33,28 @@ export default function InsightSection() {
         <p className="w-fit pb-6 text-xl font-semibold border-b border-black/20">
           (things i write when i&apos;m late night thinking)
         </p>
-
+ 
         <div className="flex flex-col gap-8 md:gap-14 mt-10">
-          <NoteItem title="The &apos;why&apos; that explain the cycles of a product" subtitle="Real world experience with products and markets" />
-          <NoteItem title="Intuition and omnipresent behavior, a case study with honest honesty" subtitle="Experience with user behavior and business goals" />
-          <NoteItem title="user experience over business goals" subtitle="real world value over raw profits" />
-          <NoteItem title="Personal branding and frameworks" subtitle="Synthesising my experience" />
+          <NoteItem 
+            title="The &apos;why&apos; that explain the cycles of a product" 
+            subtitle="Real world experience with products and markets" 
+            href="https://medium.com/@abhiramvenugopal204/the-rhythm-problem-in-modern-product-design-aa9d3223e8db"
+          />
+          <NoteItem 
+            title="Intuition and omnipresent behavior, a case study with honest honesty" 
+            subtitle="Experience with user behavior and business goals" 
+            href="https://medium.com/@abhiramvenugopal204"
+          />
+          <NoteItem 
+            title="user experience over business goals" 
+            subtitle="real world value over raw profits" 
+            href="https://medium.com/@abhiramvenugopal204"
+          />
+          <NoteItem 
+            title="Personal branding and frameworks" 
+            subtitle="Synthesising my experience" 
+            href="https://medium.com/@abhiramvenugopal204"
+          />
         </div>
       </div>
 
