@@ -6,42 +6,30 @@ import Link from "next/link";
 
 const WRITINGS = [
   {
-    id: "01",
-    title: "The 'why' that explain the cycles of a product",
-    subtitle: "Real world experience with products and markets",
-    date: "May 2026",
-    readTime: "5 min read",
-    link: "https://medium.com/@abhiramvenugopal204",
-  },
-  {
-    id: "02",
-    title: "Intuition and omnipresent behavior, a case study with honest honesty",
-    subtitle: "Experience with user behavior and business goals",
-    date: "April 2026",
-    readTime: "8 min read",
-    link: "https://medium.com/@abhiramvenugopal204",
-  },
-  {
-    id: "03",
-    title: "User experience over business goals",
-    subtitle: "Real world value over raw profits",
-    date: "March 2026",
-    readTime: "6 min read",
-    link: "https://medium.com/@abhiramvenugopal204",
-  },
-  {
-    id: "04",
-    title: "Personal branding and frameworks",
-    subtitle: "Synthesising my experience",
-    date: "February 2026",
+    title: "The 'why' that explains the rythm of a product",
     readTime: "4 min read",
+    link: "https://medium.com/@abhiramvenugopal204",
+  },
+  {
+    title: "Optimisation and development handover, a devil's deal with heavens blessing",
+    readTime: "3min read",
+    link: "https://medium.com/@abhiramvenugopal204",
+  },
+  {
+    title: "user experience over business ideals",
+    readTime: "3min read",
+    link: "https://medium.com/@abhiramvenugopal204",
+  },
+  {
+    title: "feedback handling and turnarounds",
+    readTime: "3min read",
     link: "https://medium.com/@abhiramvenugopal204",
   },
 ];
 
 export default function Writings() {
   return (
-    <div className="pt-32 px-4 min-h-screen bg-white">
+    <div className="pt-32 px-4 min-h-screen bg-transparent relative z-10">
       {/* Hero Section */}
       <div className="text-center flex items-center flex-col gap-6 py-20">
         <h1 className="text-6xl md:text-7xl xl:text-8xl font-serif leading-tight">
@@ -94,54 +82,33 @@ export default function Writings() {
       </div>
 
       {/* Writings List Section */}
-      <div className="max-w-[1000px] mx-auto pb-32 flex flex-col gap-8">
+      <div className="max-w-[1200px] mx-auto pb-32 flex flex-col gap-10 md:gap-14 px-4 md:px-12">
         {WRITINGS.map((writing, idx) => (
-          <motion.div
-            key={writing.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
+          <Link
+            key={idx}
+            href={writing.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-between cursor-pointer pb-6 border-b border-black/5 last:border-0"
           >
-            <Link
-              href={writing.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative group p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-yellow/30 transition-all duration-300 overflow-hidden block"
-            >
-              {/* Left Edge Hand-drawn line effect on hover */}
-              <div className="absolute top-0 left-0 w-1 h-full bg-brand-yellow scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300" />
-              
-              <div className="flex gap-4 md:gap-6 items-start flex-1">
-                <span className="text-sm md:text-base font-medium italic text-brand-yellow font-serif">
-                  {writing.id}
-                </span>
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-xl md:text-2xl font-bold font-sans text-gray-900 group-hover:text-brand-yellow transition-colors duration-300">
-                    {writing.title}
-                  </h3>
-                  <p className="text-gray-500 font-medium text-sm md:text-base">
-                    {writing.subtitle}
-                  </p>
-                  <div className="flex gap-4 text-xs font-semibold text-gray-400 mt-2 uppercase tracking-wider">
-                    <span>{writing.date}</span>
-                    <span>•</span>
-                    <span>{writing.readTime}</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="self-end md:self-center shrink-0">
-                <Image
-                  src="/arrow.svg"
-                  alt="Arrow"
-                  width={48}
-                  height={48}
-                  className="transform group-hover:translate-x-2 transition-transform duration-300"
-                />
-              </div>
-            </Link>
-          </motion.div>
+            <div className="flex flex-col gap-2 transition-all duration-300 group-hover:translate-x-2">
+              <h3 className="text-xl md:text-2xl font-semibold leading-snug text-black/90" style={{ fontFamily: "var(--font-kalam)" }}>
+                {writing.title}
+              </h3>
+              <span className="text-gray-400 italic text-sm md:text-base font-normal" style={{ fontFamily: "var(--font-kalam)" }}>
+                {writing.readTime}
+              </span>
+            </div>
+            <div className="shrink-0 transition-transform duration-300 group-hover:translate-x-2">
+              <Image
+                src="/arrow.svg"
+                alt="Arrow"
+                width={80}
+                height={80}
+                className="w-14 h-14 md:w-20 md:h-20"
+              />
+            </div>
+          </Link>
         ))}
       </div>
     </div>
