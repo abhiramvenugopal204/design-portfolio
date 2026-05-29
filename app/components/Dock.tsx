@@ -63,16 +63,18 @@ export default function Dock({ viewProjectUrl = "#" }: DockProps) {
               <button
                 key={item.target}
                 onClick={() => handleScrollTo(item.target)}
-                className="relative px-3 py-1.5 text-[14px] md:text-[16px] font-normal transition-colors duration-300 text-black hover:text-[#0B4A34] whitespace-nowrap focus:outline-none"
+                className={`relative px-3 py-1.5 text-[14px] md:text-[16px] font-normal transition-colors duration-300 whitespace-nowrap focus:outline-none ${
+                  isActive ? "text-white" : "text-black hover:text-[#0B4A34]"
+                }`}
               >
                 {isActive && (
                   <motion.span
                     layoutId="active-bubble"
-                    className="absolute inset-0 bg-[#0B4A34]/10 rounded-full -z-10"
+                    className="absolute inset-0 bg-brand-yellow rounded-full -z-10"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
-                <span className={isActive ? "font-bold text-[#0B4A34]" : ""}>
+                <span className={isActive ? "font-bold" : ""}>
                   {item.label}
                 </span>
               </button>
