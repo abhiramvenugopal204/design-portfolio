@@ -8,9 +8,10 @@ interface TestimonialCardProps {
   role: string;
   content: string;
   className?: string;
+  linkedin?: string;
 }
 
-function TestimonialCard({ name, role, content, className }: TestimonialCardProps) {
+function TestimonialCard({ name, role, content, className, linkedin }: TestimonialCardProps) {
   return (
     <div className={`relative p-6 flex flex-col h-[24rem] ${className}`}>
       <Image src="/paper.svg" alt="Background" fill className="z-0 absolute top-0 left-0 w-full h-full object-cover opacity-90" />
@@ -26,7 +27,14 @@ function TestimonialCard({ name, role, content, className }: TestimonialCardProp
           </p>
         </div>
         <div>
-          <h4 className="text-lg font-bold text-gray-900 leading-tight">{name}</h4>
+          <div className="flex items-center gap-2">
+            <h4 className="text-lg font-bold text-gray-900 leading-tight">{name}</h4>
+            {linkedin && (
+              <a href={linkedin} target="_blank" rel="noopener noreferrer" className="shrink-0 transition-opacity hover:opacity-80">
+                <Image src="/linkedinlogo.svg" alt="LinkedIn" width={18} height={18} className="object-contain" />
+              </a>
+            )}
+          </div>
           <p className="text-sm font-medium text-gray-600">{role}</p>
         </div>
       </div>
@@ -42,7 +50,8 @@ export default function Testimonials() {
       name: "Nithin Balachandran", 
       role: "Technical Product Manager - IBM", 
       content: "",
-      avatar: "/logo.svg"
+      avatar: "/logo.svg",
+      linkedin: "https://www.linkedin.com"
     },
     { 
       name: "Joyel Nelson", 
