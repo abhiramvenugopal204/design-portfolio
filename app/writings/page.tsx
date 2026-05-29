@@ -8,7 +8,7 @@ const WRITINGS = [
   {
     title: "The 'why' that explains the rythm of a product",
     readTime: "4 min read",
-    link: "https://medium.com/@abhiramvenugopal204",
+    link: "https://medium.com/@abhiramvenugopal204/the-rhythm-problem-in-modern-product-design-aa9d3223e8db",
   },
   {
     title: "Optimisation and development handover, a devil's deal with heavens blessing",
