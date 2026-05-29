@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const NAV_LINKS = [
@@ -34,6 +34,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
 
   // Determine the base text color based on the page
   const isWhiteTextPage = pathname === "/" || pathname === "/mystory";
@@ -49,19 +51,36 @@ export default function Navbar() {
   };
 
   useEffect(() => {
+    lastScrollY.current = window.scrollY;
+    setIsVisible(true); // Reset visibility on page change
+
     const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (pathname === "/simplita") {
+        if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+          setIsVisible(false);
+        } else if (currentScrollY < lastScrollY.current) {
+          setIsVisible(true);
+        }
+      } else {
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+
       const homeSection = document.getElementById("home");
       if (homeSection) {
         const threshold = homeSection.offsetHeight - 80;
-        setIsScrolled(window.scrollY > threshold);
+        setIsScrolled(currentScrollY > threshold);
       } else {
-        setIsScrolled(window.scrollY > 50);
+        setIsScrolled(currentScrollY > 50);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   const navClassName = `max-w-[1920px] mx-auto fixed top-0 left-0 right-0 z-50 backdrop-blur-[1px] flex items-center justify-between px-6 lg:px-8 py-4 md:py-6 ${
         isOpen ? 'bg-transparent shadow-none' : (
@@ -73,7 +92,8 @@ export default function Navbar() {
     <>
       <motion.nav
         layout
-        transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
+        animate={{ y: isVisible ? 0 : -120 }}
+        transition={{ type: "spring", stiffness: 260, damping: 26 }}
         className={navClassName}
       >
         {/* Logo Section */}
