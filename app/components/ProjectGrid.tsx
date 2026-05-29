@@ -7,9 +7,10 @@ interface ProjectCardProps {
   img: string;
   className?: string;
   href?: string;
+  buttonImg?: string;
 }
 
-function ProjectCard({ title, description, img, className, href }: ProjectCardProps) {
+function ProjectCard({ title, description, img, className, href, buttonImg }: ProjectCardProps) {
   const content = (
     <div className={`relative p-8 bg-brand-yellow w-full h-full flex flex-col gap-8 ${className || ""}`}>
       <Image src="/line1.svg" alt={title} width={400} height={400} className="absolute -top-1.5 left-0 w-full h-fit object-fill" />
@@ -26,7 +27,7 @@ function ProjectCard({ title, description, img, className, href }: ProjectCardPr
           </h3>
           <div className="shrink-0">
             <Image
-              src="/casestudyButton.svg"
+              src={buttonImg || "/casestudyButton.svg"}
               alt="View Case study"
               width={140}
               height={50}
@@ -98,6 +99,7 @@ export default function ProjectGrid() {
           title="How this portfolio was crafted"
           description="Crafted as a narrative of my design thinking, this portfolio highlights the journey from problem to product. Each project captures the exploration, decisions, and outcomes."
           img="/hp4.svg"
+          buttonImg="/progress.svg"
         />
       </div>
     </section>

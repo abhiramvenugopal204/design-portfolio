@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import HeadPop from "../../components/headPop";
+import Dock from "../../components/Dock";
 
 import { PROJECTS } from "../data";
 
@@ -298,22 +299,27 @@ export default function ProjectPage() {
                           </Link>
 
                           {/* Top Grid Info */}
-                          <div className="grid grid-cols-2 gap-y-10 gap-x-8 mt-12">
+                          <div className="grid grid-cols-2 gap-y-10 gap-x-8 mt-12" style={{ fontFamily: 'var(--font-kalam)' }}>
                             <div>
                               <h3 className="text-gray-400 italic text-[16px] mb-1">My Role</h3>
-                              <p className="font-semibold text-[16px]">Product Designer</p>
+                              <p className="font-semibold text-[16px]" style={{ fontStyle: 'normal' }}>UI/UX Designer</p>
                             </div>
                             <div>
                               <h3 className="text-gray-400 italic text-[16px] mb-1">Team</h3>
-                              <p className="font-semibold text-[16px] leading-snug">1 Product Designer, 3 Developers, 1 Lead Manager</p>
+                              <p className="font-semibold text-[16px] leading-snug" style={{ fontStyle: 'normal' }}>
+                                1 Product Designer,<br />
+                                2 Developers, 1 Lead Manager,<br />
+                                2 Content writers,<br />
+                                5+ Stakeholders
+                              </p>
                             </div>
                             <div>
                               <h3 className="text-gray-400 italic text-[16px] mb-1">Industry</h3>
-                              <p className="font-semibold text-[16px]">Ed-Tech</p>
+                              <p className="font-semibold text-[16px] leading-snug" style={{ fontStyle: 'normal' }}>TourismTech & Digital Public Infrastructure</p>
                             </div>
                             <div>
                               <h3 className="text-gray-400 italic text-[16px] mb-1">Timeline</h3>
-                              <p className="font-semibold text-[16px] leading-snug">January 2026 - April 2026</p>
+                              <p className="font-semibold text-[16px] leading-snug" style={{ fontStyle: 'normal' }}>January 2025 - February 2025</p>
                             </div>
                           </div>
                         </div>
@@ -332,201 +338,243 @@ export default function ProjectPage() {
                       </div>
 
                       {/* Bottom Grid Info */}
-                      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 mt-16 w-full">
+                      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 mt-16 w-full" style={{ fontFamily: 'var(--font-kalam)' }}>
                         {/* Left column info */}
                         <div className="flex flex-col gap-10">
                           <div>
-                            <h3 className="text-gray-400 italic text-[16px] mb-1">Challenge</h3>
-                            <p className="font-semibold text-[16px]">UI/UX Designer</p>
+                            <h3 className="text-gray-400 italic text-[16px] mb-2">Challenge</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2 font-semibold text-[16px] leading-relaxed" style={{ fontStyle: 'normal' }}>
+                              <li>Explaining a complex decentralized tourism ecosystem clearly</li>
+                              <li>Balancing multiple stakeholder needs within one platform narrative</li>
+                              <li>Making infrastructure-heavy concepts accessible to non-technical users</li>
+                              <li>Structuring large-scale ecosystem information without overwhelming users</li>
+                              <li>Translating policy, culture, and technology into a unified experience</li>
+                            </ul>
                           </div>
                           <div>
-                            <h3 className="text-gray-400 italic text-[16px] mb-1">Impact</h3>
-                            <p className="font-semibold text-[16px]">Ed-Tech</p>
+                            <h3 className="text-gray-400 italic text-[16px] mb-2">Impact</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2 font-semibold text-[16px] leading-relaxed" style={{ fontStyle: 'normal' }}>
+                              <li>Enabled exposure to 3000+ startup ecosystem participants</li>
+                              <li>Supported communication across 5+ stakeholder groups</li>
+                              <li>Helped position OneTAC within India&apos;s $3T+ tourism ecosystem</li>
+                              <li>Established the platform as a central ecosystem communication layer</li>
+                              <li>Improved understanding of practitioner onboarding and participation flows</li>
+                            </ul>
                           </div>
                         </div>
 
                         {/* Right column info */}
                         <div className="flex flex-col gap-10">
                           <div>
-                            <h3 className="text-gray-400 italic text-[16px] mb-1">Solution</h3>
-                            <p className="font-semibold text-[16px] leading-snug">1 Product Designer, 3 Developers, 1 Lead Manager</p>
+                            <h3 className="text-gray-400 italic text-[16px] mb-2">Solution</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2 font-semibold text-[16px] leading-relaxed" style={{ fontStyle: 'normal' }}>
+                              <li>Designed a clear ecosystem-driven information architecture</li>
+                              <li>Simplified complex infrastructure through visual storytelling</li>
+                              <li>Built structured flows for discovery, onboarding, and participation</li>
+                              <li>Created a scalable digital narrative for multiple stakeholder groups</li>
+                              <li>Developed early practitioner app concepts to validate ecosystem usability</li>
+                            </ul>
                           </div>
                           <div>
-                            <h3 className="text-gray-400 italic text-[16px] mb-1">Learnings</h3>
-                            <p className="font-semibold text-[16px] leading-snug">January 2026 - April 2026</p>
+                            <h3 className="text-gray-400 italic text-[16px] mb-2">Learnings</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2 font-semibold text-[16px] leading-relaxed" style={{ fontStyle: 'normal' }}>
+                              <li>Ecosystem products require clarity across diverse user groups</li>
+                              <li>Strong information architecture simplifies complex public systems</li>
+                              <li>Storytelling plays a critical role in infrastructure adoption</li>
+                              <li>Early prototypes help align stakeholders faster</li>
+                              <li>Designing for ecosystems means designing beyond individual users</li>
+                            </ul>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <Image 
-                        src="/project/onetac1.svg" 
-                        alt="OneTac Case Study Details" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                        priority
-                    />
-                    <Image 
-                        src="/project/onetac2.svg" 
-                        alt="OneTac Case Study Details Part 2" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                    />
-                    
-                    <div className="w-full bg-white px-6 md:px-12 lg:px-24 py-16 max-w-5xl mx-auto" style={{ fontFamily: 'var(--font-kalam)', color: 'black', fontStyle: 'normal' }}>
-                        <div className="flex flex-col gap-8 text-lg md:text-xl lg:text-2xl leading-relaxed">
-                            <div>
-                                <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Project type</h3>
-                                <p>Platform website / Vision-led digital experience / Ecosystem presentation</p>
-                            </div>
+                    <div id="introduction">
+                      <Image 
+                          src="/project/onetac1.svg" 
+                          alt="OneTac Case Study Details" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                          priority
+                      />
+                      <Image 
+                          src="/project/onetac2.svg" 
+                          alt="OneTac Case Study Details Part 2" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                      />
+                      
+                      <div className="w-full bg-white px-6 md:px-12 lg:px-24 py-16 max-w-5xl mx-auto" style={{ fontFamily: 'var(--font-kalam)', color: 'black', fontStyle: 'normal' }}>
+                          <div className="flex flex-col gap-8 text-lg md:text-xl lg:text-2xl leading-relaxed">
+                              <div>
+                                  <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Project type</h3>
+                                  <p>Platform website / Vision-led digital experience / Ecosystem presentation</p>
+                              </div>
 
-                            <div>
-                                <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Category</h3>
-                                <p>Web design, UI/UX design, responsive design, digital product design,</p>
-                            </div>
+                              <div>
+                                  <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Category</h3>
+                                  <p>Web design, UI/UX design, responsive design, digital product design,</p>
+                              </div>
 
-                            <div>
-                                <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Tools</h3>
-                                <p>Figma, Framer</p>
-                            </div>
+                              <div>
+                                  <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Tools</h3>
+                                  <p>Figma, Framer</p>
+                              </div>
 
-                            <div>
-                                <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Deliverables</h3>
-                                <ul className="flex flex-col gap-2 pl-4">
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Homepage design</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Vision and ecosystem sections</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Platform overview pages</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Responsive layouts</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Content structure and storytelling</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Reusable UI components</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Design system foundation</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Design direction</span>
-                                    </li>
-                                </ul>
-                            </div>
+                              <div>
+                                  <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Deliverables</h3>
+                                  <ul className="flex flex-col gap-2 pl-4">
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Homepage design</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Vision and ecosystem sections</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Platform overview pages</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Responsive layouts</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Content structure and storytelling</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Reusable UI components</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Design system foundation</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Design direction</span>
+                                      </li>
+                                  </ul>
+                              </div>
 
-                            <p className="mt-2" style={{ color: '#7F3907' }}>
-                                The experience was designed with a clean and modern visual language focused on clarity, accessibility, and structured storytelling — helping communicate a large-scale vision in a way that feels approachable and easy to understand.
-                            </p>
+                              <p className="mt-2" style={{ color: '#7F3907' }}>
+                                  The experience was designed with a clean and modern visual language focused on clarity, accessibility, and structured storytelling — helping communicate a large-scale vision in a way that feels approachable and easy to understand.
+                              </p>
 
-                            <div className="mt-4">
-                                <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">About OneTAC</h3>
-                                <p>
-                                    OneTAC is building a pan-India digital grid that connects tourism, arts, and culture into a unified ecosystem — aiming to create a more accessible, visible, and economically connected future for India’s TAC sector.
-                                </p>
-                                <p className="mt-4">
-                                    The platform highlights the untapped potential within India’s tourism and artisan economy, while creating pathways for discovery, visibility, and participation at scale.
-                                </p>
-                            </div>
+                              <div className="mt-4">
+                                  <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">About OneTAC</h3>
+                                  <p>
+                                      OneTAC is building a pan-India digital grid that connects tourism, arts, and culture into a unified ecosystem — aiming to create a more accessible, visible, and economically connected future for India’s TAC sector.
+                                  </p>
+                                  <p className="mt-4">
+                                      The platform highlights the untapped potential within India’s tourism and artisan economy, while creating pathways for discovery, visibility, and participation at scale.
+                                  </p>
+                              </div>
 
-                            <div className="mt-4">
-                                <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Key project goals</h3>
-                                <ul className="flex flex-col gap-2 pl-4">
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Communicate the vision with clarity</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Create trust through structured design</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Simplify complex information flows</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Build an accessible and scalable experience</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Support engagement through intuitive UX</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Create a strong digital foundation for future growth</span>
-                                    </li>
-                                </ul>
-                            </div>
+                              <div className="mt-4">
+                                  <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Key project goals</h3>
+                                  <ul className="flex flex-col gap-2 pl-4">
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Communicate the vision with clarity</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Create trust through structured design</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Simplify complex information flows</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Build an accessible and scalable experience</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Support engagement through intuitive UX</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Create a strong digital foundation for future growth</span>
+                                      </li>
+                                  </ul>
+                              </div>
 
-                            <p className="mt-2" style={{ color: '#7F3907' }}>
-                                The overall experience was shaped to balance storytelling, usability, and structure — creating a platform that feels informative, refined, and future-focused.
-                            </p>
-                        </div>
+                              <p className="mt-2" style={{ color: '#7F3907' }}>
+                                  The overall experience was shaped to balance storytelling, usability, and structure — creating a platform that feels informative, refined, and future-focused.
+                              </p>
+                          </div>
+                      </div>
                     </div>
-                    <Image 
-                        src="/project/onetac3.svg" 
-                        alt="OneTac Case Study Details Part 3" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                    />
-                    <Image 
-                        src="/project/onetac4.svg" 
-                        alt="OneTac Case Study Details Part 4" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                    />
-                    <Image 
-                        src="/project/onetac5.svg" 
-                        alt="OneTac Case Study Details Part 5" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                    />
-                    <Image 
-                        src="/project/onetac6.svg" 
-                        alt="OneTac Case Study Details Part 6" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                    />
-                    <Image 
-                        src="/project/onetac7.svg" 
-                        alt="OneTac Case Study Details Part 7" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                    />
-                    <Image 
-                        src="/project/onetac8.svg" 
-                        alt="OneTac Case Study Details Part 8" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                    />
-                    <Image 
-                        src="/project/onetac9.svg" 
-                        alt="OneTac Case Study Details Part 9" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                    />
+                    
+                    <div id="research-phase">
+                      <Image 
+                          src="/project/onetac3.svg" 
+                          alt="OneTac Case Study Details Part 3" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                      />
+                      <Image 
+                          src="/project/onetac4.svg" 
+                          alt="OneTac Case Study Details Part 4" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                      />
+                    </div>
+                    
+                    <div id="ideate">
+                      <Image 
+                          src="/project/onetac5.svg" 
+                          alt="OneTac Case Study Details Part 5" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                      />
+                    </div>
+                    
+                    <div id="design-guidelines">
+                      <Image 
+                          src="/project/onetac6.svg" 
+                          alt="OneTac Case Study Details Part 6" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                      />
+                    </div>
+                    
+                    <div id="final-design">
+                      <Image 
+                          src="/project/onetac7.svg" 
+                          alt="OneTac Case Study Details Part 7" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                      />
+                    </div>
+                    
+                    <div id="website-drafts">
+                      <Image 
+                          src="/project/onetac8.svg" 
+                          alt="OneTac Case Study Details Part 8" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                      />
+                      <Image 
+                          src="/project/onetac9.svg" 
+                          alt="OneTac Case Study Details Part 9" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                      />
+                    </div>
+                    <Dock viewProjectUrl="#" />
                     <HeadPop />
                 </section>
             )}
@@ -563,22 +611,28 @@ export default function ProjectPage() {
                           </Link>
 
                           {/* Top Grid Info */}
-                          <div className="grid grid-cols-2 gap-y-10 gap-x-8 mt-12">
+                          <div className="grid grid-cols-2 gap-y-10 gap-x-8 mt-12" style={{ fontFamily: 'var(--font-kalam)' }}>
                             <div>
                               <h3 className="text-gray-400 italic text-[16px] mb-1">My Role</h3>
-                              <p className="font-semibold text-[16px]">Product Designer</p>
+                              <p className="font-semibold text-[16px]" style={{ fontStyle: 'normal' }}>UI/UX Designer</p>
                             </div>
                             <div>
                               <h3 className="text-gray-400 italic text-[16px] mb-1">Team</h3>
-                              <p className="font-semibold text-[16px] leading-snug">1 Product Designer, 3 Developers, 1 Lead Manager</p>
+                              <p className="font-semibold text-[16px] leading-snug" style={{ fontStyle: 'normal' }}>
+                                1 Product Designer, 1 Developers,<br />
+                                1 Lead Manager
+                              </p>
                             </div>
                             <div>
                               <h3 className="text-gray-400 italic text-[16px] mb-1">Industry</h3>
-                              <p className="font-semibold text-[16px]">Ed-Tech</p>
+                              <p className="font-semibold text-[16px] leading-snug" style={{ fontStyle: 'normal' }}>
+                                Digital Prenatal Care &<br />
+                                Healthcare Navigation Platform
+                              </p>
                             </div>
                             <div>
                               <h3 className="text-gray-400 italic text-[16px] mb-1">Timeline</h3>
-                              <p className="font-semibold text-[16px] leading-snug">January 2026 - April 2026</p>
+                              <p className="font-semibold text-[16px] leading-snug" style={{ fontStyle: 'normal' }}>April 2026 - May 2026</p>
                             </div>
                           </div>
                         </div>
@@ -597,174 +651,212 @@ export default function ProjectPage() {
                       </div>
 
                       {/* Bottom Grid Info */}
-                      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 mt-16 w-full">
+                      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 mt-16 w-full" style={{ fontFamily: 'var(--font-kalam)' }}>
                         {/* Left column info */}
                         <div className="flex flex-col gap-10">
                           <div>
-                            <h3 className="text-gray-400 italic text-[16px] mb-1">Challenge</h3>
-                            <p className="font-semibold text-[16px]">UI/UX Designer</p>
+                            <h3 className="text-gray-400 italic text-[16px] mb-2">Challenge</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2 font-semibold text-[16px] leading-relaxed" style={{ fontStyle: 'normal' }}>
+                              <li>Presenting large amounts of sensitive information within a single-page experience</li>
+                              <li>Preventing users from feeling overwhelmed during vulnerable moments</li>
+                              <li>Structuring healthcare, insurance, and support resources clearly</li>
+                              <li>Balancing emotional comfort with informational depth</li>
+                              <li>Maintaining readability and accessibility across dense content sections</li>
+                            </ul>
                           </div>
                           <div>
-                            <h3 className="text-gray-400 italic text-[16px] mb-1">Impact</h3>
-                            <p className="font-semibold text-[16px]">Ed-Tech</p>
+                            <h3 className="text-gray-400 italic text-[16px] mb-2">Impact</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2 font-semibold text-[16px] leading-relaxed" style={{ fontStyle: 'normal' }}>
+                              <li>Improved clarity and discoverability of support resources</li>
+                              <li>Reduced friction in accessing healthcare-related information</li>
+                              <li>Created a more approachable and emotionally supportive experience</li>
+                              <li>Enabled users to navigate complex topics more confidently</li>
+                              <li>Delivered a centralized resource guide aligned with client requirements</li>
+                            </ul>
                           </div>
                         </div>
 
                         {/* Right column info */}
                         <div className="flex flex-col gap-10">
                           <div>
-                            <h3 className="text-gray-400 italic text-[16px] mb-1">Solution</h3>
-                            <p className="font-semibold text-[16px] leading-snug">1 Product Designer, 3 Developers, 1 Lead Manager</p>
+                            <h3 className="text-gray-400 italic text-[16px] mb-2">Solution</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2 font-semibold text-[16px] leading-relaxed" style={{ fontStyle: 'normal' }}>
+                              <li>Designed a calm, accessibility-focused single-page experience</li>
+                              <li>Structured information into clear, scannable content sections</li>
+                              <li>Simplified navigation through guided visual hierarchy</li>
+                              <li>Created readable layouts optimized for mobile and web accessibility</li>
+                              <li>Unified care resources, support guidance, and services into one seamless flow</li>
+                            </ul>
                           </div>
                           <div>
-                            <h3 className="text-gray-400 italic text-[16px] mb-1">Learnings</h3>
-                            <p className="font-semibold text-[16px] leading-snug">January 2026 - April 2026</p>
+                            <h3 className="text-gray-400 italic text-[16px] mb-2">Learnings</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2 font-semibold text-[16px] leading-relaxed" style={{ fontStyle: 'normal' }}>
+                              <li>Information-heavy experiences require strong content hierarchy</li>
+                              <li>Emotional comfort is critical in healthcare-related interfaces</li>
+                              <li>Single-page experiences demand careful pacing and readability</li>
+                              <li>Accessibility decisions directly improve trust and usability</li>
+                              <li>Simplifying navigation can reduce stress during sensitive journeys</li>
+                            </ul>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <Image 
-                        src="/project/remora1.svg" 
-                        alt="Remora Case Study Details" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                    />
-                    <Image 
-                        src="/project/remora2.svg" 
-                        alt="Remora Case Study Details Part 2" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                    />
-                    
-                    <div className="w-full bg-white px-6 md:px-12 lg:px-24 py-16 max-w-5xl mx-auto" style={{ fontFamily: 'var(--font-kalam)', color: 'black', fontStyle: 'normal' }}>
-                        <div className="flex flex-col gap-8 text-lg md:text-xl lg:text-2xl leading-relaxed">
-                            <div>
-                                <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Project type</h3>
-                                <p>Healthcare support platform / Resource accessibility experience / Community-focused digital design</p>
-                            </div>
+                    <div id="introduction">
+                      <Image 
+                          src="/project/remora1.svg" 
+                          alt="Remora Case Study Details" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                      />
+                      <Image 
+                          src="/project/remora2.svg" 
+                          alt="Remora Case Study Details Part 2" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                      />
+                      
+                      <div className="w-full bg-white px-6 md:px-12 lg:px-24 py-16 max-w-5xl mx-auto" style={{ fontFamily: 'var(--font-kalam)', color: 'black', fontStyle: 'normal' }}>
+                          <div className="flex flex-col gap-8 text-lg md:text-xl lg:text-2xl leading-relaxed">
+                              <div>
+                                  <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Project type</h3>
+                                  <p>Healthcare support platform / Resource accessibility experience / Community-focused digital design</p>
+                              </div>
 
-                            <div>
-                                <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Category</h3>
-                                <p>UI/UX design, web design, responsive design, accessibility-focused design, digital experience design</p>
-                            </div>
+                              <div>
+                                  <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Category</h3>
+                                  <p>UI/UX design, web design, responsive design, accessibility-focused design, digital experience design</p>
+                              </div>
 
-                            <div>
-                                <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Tools</h3>
-                                <p>Figma, Framer</p>
-                            </div>
+                              <div>
+                                  <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Tools</h3>
+                                  <p>Figma, Framer</p>
+                              </div>
 
-                            <div>
-                                <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Deliverables</h3>
-                                <ul className="flex flex-col gap-2">
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Homepage design</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Resource guide experience</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Information architecture</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Responsive layouts</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Accessibility-focused UX</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Content structure and readability</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Reusable UI components</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Visual design direction</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Support-focused interaction design</span>
-                                    </li>
-                                </ul>
-                            </div>
+                              <div>
+                                  <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Deliverables</h3>
+                                  <ul className="flex flex-col gap-2">
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Homepage design</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Resource guide experience</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Information architecture</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Responsive layouts</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Accessibility-focused UX</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Content structure and readability</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Reusable UI components</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Visual design direction</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Support-focused interaction design</span>
+                                      </li>
+                                  </ul>
+                              </div>
 
-                            <p className="mt-2" style={{ color: '#A0A9FF' }}>
-                                The experience was designed with a soft and approachable visual language focused on clarity, accessibility, and emotional comfort. Built around a seamless single-page structure, the platform brings together resources, guidance, and support information into one accessible flow — reducing friction and making sensitive information easier to navigate during vulnerable moments.
-                            </p>
+                              <p className="mt-2" style={{ color: '#A0A9FF' }}>
+                                  The experience was designed with a soft and approachable visual language focused on clarity, accessibility, and emotional comfort. Built around a seamless single-page structure, the platform brings together resources, guidance, and support information into one accessible flow — reducing friction and making sensitive information easier to navigate during vulnerable moments.
+                              </p>
 
-                            <div className="mt-4">
-                                <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">About OneTAC</h3>
-                                <p>
-                                    Remora is a digital support and resource platform designed to help individuals access clear, practical guidance related to pregnancy care and support services. The experience focuses on making healthcare-related information feel calmer, more approachable, and easier to understand through thoughtful structure, readability, and accessible UX.
-                                </p>
-                            </div>
+                              <div className="mt-4">
+                                  <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">About OneTAC</h3>
+                                  <p>
+                                      Remora is a digital support and resource platform designed to help individuals access clear, practical guidance related to pregnancy care and support services. The experience focuses on making healthcare-related information feel calmer, more approachable, and easier to understand through thoughtful structure, readability, and accessible UX.
+                                  </p>
+                              </div>
 
-                            <div className="mt-4">
-                                <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Key project goals</h3>
-                                <ul className="flex flex-col gap-2">
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Simplify access to support resources</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Create a calm and approachable experience</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Improve readability and information clarity</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Reduce overwhelm through structured UX</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Design accessible and inclusive interfaces</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Support users through sensitive journeys</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Build trust through thoughtful design</span>
-                                    </li>
-                                    <li className="flex gap-3">
-                                        <span>·</span>
-                                        <span>Create seamless mobile-friendly experiences</span>
-                                    </li>
-                                </ul>
-                            </div>
+                              <div className="mt-4">
+                                  <h3 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-3">Key project goals</h3>
+                                  <ul className="flex flex-col gap-2">
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Simplify access to support resources</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Create a calm and approachable experience</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Improve readability and information clarity</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Reduce overwhelm through structured UX</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Design accessible and inclusive interfaces</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Support users through sensitive journeys</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Build trust through thoughtful design</span>
+                                      </li>
+                                      <li className="flex gap-3">
+                                          <span>·</span>
+                                          <span>Create seamless mobile-friendly experiences</span>
+                                      </li>
+                                  </ul>
+                              </div>
 
-                            <p className="mt-2" style={{ color: '#A0A9FF' }}>
-                                The overall experience was shaped to feel gentle, informative, and human-centered — creating a platform that supports users with clarity, care, and accessibility throughout their journey.
-                            </p>
-                        </div>
+                              <p className="mt-2" style={{ color: '#A0A9FF' }}>
+                                  The overall experience was shaped to feel gentle, informative, and human-centered — creating a platform that supports users with clarity, care, and accessibility throughout their journey.
+                              </p>
+                          </div>
+                      </div>
                     </div>
-                    <Image 
-                        src="/project/remora3.svg" 
-                        alt="Remora Case Study Details Part 3" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                    />
-                    <Image 
-                        src="/project/remora4.svg" 
-                        alt="Remora Case Study Details Part 4" 
-                        width={1920} 
-                        height={1080} 
-                        className="w-full h-auto"
-                    />
+                    
+                    <div id="research-phase">
+                      <Image 
+                          src="/project/remora3.svg" 
+                          alt="Remora Case Study Details Part 3" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                      />
+                    </div>
+                    
+                    <div id="ideate">
+                      <Image 
+                          src="/project/remora4.svg" 
+                          alt="Remora Case Study Details Part 4" 
+                          width={1920} 
+                          height={1080} 
+                          className="w-full h-auto"
+                      />
+                    </div>
+                    
+                    <div id="design-guidelines" />
+                    <div id="final-design" />
+                    <div id="website-drafts" />
+                    
+                    <Dock viewProjectUrl="#" />
                     <HeadPop />
                 </section>
             )}
