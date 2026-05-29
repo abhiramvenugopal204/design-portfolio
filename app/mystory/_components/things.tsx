@@ -116,8 +116,45 @@ export default function Things() {
 
     return (
         <>
+            {/* section-5 */}
+            <div className="relative -top-20 lg:-top-6 p-4 mx-4 mt-0 md:mt-14 mb-8 bg-white shadow-lg shadow-gray-200 overflow-hidden">
+                {/* Top Edge */}
+                <div className="absolute -top-0.5 left-0 w-full h-1 overflow-hidden z-30">
+                    <Image src="/mystory/lineLong.svg" alt="line" fill className="object-cover" />
+                </div>
+                {/* Bottom Edge */}
+                <div className="absolute -bottom-0.5 left-0 w-full h-1 overflow-hidden z-30">
+                    <Image src="/mystory/lineLong.svg" alt="line" fill className="object-cover" />
+                </div>
+                {/* Left Edge */}
+                <div className="absolute top-0 left-0 w-1 h-full overflow-hidden z-30">
+                    <Image src="/mystory/line.svg" alt="line" fill className="object-cover" />
+                </div>
+                {/* Right Edge */}
+                <div className="absolute top-0 right-0 w-1 h-full overflow-hidden z-30">
+                    <Image src="/mystory/line.svg" alt="line" fill className="object-cover" />
+                </div>
+
+                <div className="relative bg-brand-yellow rounded-2xl lg:rounded-4xl border p-4 text-center flex flex-col gap-2">
+                    <div className="z-30 absolute -top-8 right-1/4 translate-x-1/4 w-fit h-30">
+                        <Image
+                            src="/mystory/cat.svg"
+                            alt="cat"
+                            height={50}
+                            width={50}
+                            className="object-contain w-full h-full"
+                        />
+                    </div>
+                    <p className="z-30 text-lg lg:text-xl font-semibold leading-relaxed">
+                        Well that’s some part of the stories! <br />
+                        Let’s work on some interesting perspectives <br />
+                        You can find me at <Link href={`mailto:${email}`} className="underline">{email}</Link>
+                    </p>
+                </div>
+            </div>
+
             {/* section-1: Things that shape how I see the world */}
-            <div className="relative -top-28 lg:-top-12 flex flex-col py-10 overflow-hidden w-full">
+            <div className="relative -top-20 lg:-top-6 flex flex-col py-10 overflow-hidden w-full">
                 <h1 className="px-4 text-xl lg:text-2xl font-semibold z-10">
                     Things that shape how I see the world
                 </h1>
@@ -389,42 +426,6 @@ export default function Things() {
                 </div>
             </div>
 
-            {/* section-5 */}
-            <div className="relative -top-28 lg:-top-12 p-4 mx-4 mt-0 md:mt-14 mb-8 bg-white shadow-lg shadow-gray-200 overflow-hidden">
-                {/* Top Edge */}
-                <div className="absolute -top-0.5 left-0 w-full h-1 overflow-hidden z-30">
-                    <Image src="/mystory/lineLong.svg" alt="line" fill className="object-cover" />
-                </div>
-                {/* Bottom Edge */}
-                <div className="absolute -bottom-0.5 left-0 w-full h-1 overflow-hidden z-30">
-                    <Image src="/mystory/lineLong.svg" alt="line" fill className="object-cover" />
-                </div>
-                {/* Left Edge */}
-                <div className="absolute top-0 left-0 w-1 h-full overflow-hidden z-30">
-                    <Image src="/mystory/line.svg" alt="line" fill className="object-cover" />
-                </div>
-                {/* Right Edge */}
-                <div className="absolute top-0 right-0 w-1 h-full overflow-hidden z-30">
-                    <Image src="/mystory/line.svg" alt="line" fill className="object-cover" />
-                </div>
-
-                <div className="relative bg-brand-yellow rounded-2xl lg:rounded-4xl border p-4 text-center flex flex-col gap-2">
-                    <div className="z-30 absolute -top-8 right-1/4 translate-x-1/4 w-fit h-30">
-                        <Image
-                            src="/mystory/cat.svg"
-                            alt="cat"
-                            height={50}
-                            width={50}
-                            className="object-contain w-full h-full"
-                        />
-                    </div>
-                    <p className="z-30 text-lg lg:text-xl font-semibold leading-relaxed">
-                        Well that’s some part of the stories! <br />
-                        Let’s work on some interesting perspectives <br />
-                        You can find me at <Link href={`mailto:${email}`} className="underline">{email}</Link>
-                    </p>
-                </div>
-            </div>
         </>
     )
 }
