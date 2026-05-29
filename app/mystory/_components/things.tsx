@@ -390,7 +390,7 @@ export default function Things() {
             </div>
 
             {/* section-5 */}
-            <div className="relative p-4 mx-4 mt-0 md:mt-14 mb-8 bg-white shadow-lg shadow-gray-200 overflow-hidden">
+            <div className="relative -top-28 lg:-top-12 p-4 mx-4 mt-0 md:mt-14 mb-8 bg-white shadow-lg shadow-gray-200 overflow-hidden">
                 {/* Top Edge */}
                 <div className="absolute -top-0.5 left-0 w-full h-1 overflow-hidden z-30">
                     <Image src="/mystory/lineLong.svg" alt="line" fill className="object-cover" />
