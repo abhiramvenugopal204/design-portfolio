@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const NAV_LINKS = [
   { name: "Home", href: "/" },
   { name: "Projects", href: "/projects" },
-  { name: "Writing", href: "https://www.medium.com" },
+  { name: "Writing", href: "/writings" },
   { name: "My Story", href: "/mystory" },
 ];
 
