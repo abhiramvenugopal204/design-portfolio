@@ -84,7 +84,8 @@ export default function Testimonials() {
       role: "Developer", 
       content: "",
       avatar: "/logo.svg",
-      linkedin: "https://www.linkedin.com/in/devaprasad-s/"
+      linkedin: "https://www.linkedin.com/in/devaprasad-s/",
+      image: "/devu.svg"
     },
     { 
       name: "Saravana Pradeep", 
@@ -99,7 +100,8 @@ export default function Testimonials() {
       role: "Cinematographer", 
       content: "",
       avatar: "/logo.svg",
-      instagram: "https://www.instagram.com/ajithvaisakh/"
+      instagram: "https://www.instagram.com/ajithvaisakh/",
+      image: "/ajith.svg"
     },
     { 
       name: "Subradeepan", 
