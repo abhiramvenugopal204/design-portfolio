@@ -57,43 +57,50 @@ export default function Testimonials() {
       name: "Joyel Nelson", 
       role: "Cinematographer", 
       content: "",
-      avatar: "/logo.svg"
+      avatar: "/logo.svg",
+      linkedin: "https://www.linkedin.com"
     },
     { 
       name: "Akshaya Rajesh", 
       role: "Founder - Algonots", 
       content: "",
-      avatar: "/logo.svg"
+      avatar: "/logo.svg",
+      linkedin: "https://www.linkedin.com"
     },
     { 
       name: "Devaprasad S", 
       role: "Developer", 
       content: "",
-      avatar: "/logo.svg"
+      avatar: "/logo.svg",
+      linkedin: "https://www.linkedin.com"
     },
     { 
       name: "Saravana Pradeep", 
       role: "Founder - WOWSQL | Ex-Simplita", 
       content: "",
-      avatar: "/logo.svg"
+      avatar: "/logo.svg",
+      linkedin: "https://www.linkedin.com"
     },
     { 
       name: "Ajith Vaisakh", 
       role: "Cinematographer", 
       content: "",
-      avatar: "/logo.svg"
+      avatar: "/logo.svg",
+      linkedin: "https://www.linkedin.com"
     },
     { 
       name: "Subradeepan", 
       role: "Product Designer", 
       content: "",
-      avatar: "/logo.svg"
+      avatar: "/logo.svg",
+      linkedin: "https://www.linkedin.com"
     },
     { 
       name: "Remya Girija", 
       role: "Founder - Chapter 1", 
       content: "",
-      avatar: "/logo.svg"
+      avatar: "/logo.svg",
+      linkedin: "https://www.linkedin.com"
     },
   ];
 
