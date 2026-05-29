@@ -10,9 +10,10 @@ interface TestimonialCardProps {
   className?: string;
   linkedin?: string;
   instagram?: string;
+  image?: string;
 }
 
-function TestimonialCard({ name, role, content, className, linkedin, instagram }: TestimonialCardProps) {
+function TestimonialCard({ name, role, content, className, linkedin, instagram, image = "/placeholder.svg" }: TestimonialCardProps) {
   return (
     <div className={`relative p-6 flex flex-col h-[24rem] ${className}`}>
       <Image src="/paper.svg" alt="Background" fill className="z-0 absolute top-0 left-0 w-full h-full object-cover opacity-90" />
@@ -24,8 +25,8 @@ function TestimonialCard({ name, role, content, className, linkedin, instagram }
       <div className="z-10 flex flex-col h-full justify-between">
         <div className="relative w-full h-[65%] rounded-[18px] overflow-hidden border border-black/80">
           <Image 
-            src="/placeholder.svg" 
-            alt="Placeholder" 
+            src={image} 
+            alt={name} 
             fill 
             className="object-cover" 
           />
@@ -68,7 +69,8 @@ export default function Testimonials() {
       role: "Cinematographer", 
       content: "",
       avatar: "/logo.svg",
-      instagram: "https://www.instagram.com/joyel.nelson/"
+      instagram: "https://www.instagram.com/joyel.nelson/",
+      image: "/joel.svg"
     },
     { 
       name: "Akshaya Rajesh", 
@@ -89,7 +91,8 @@ export default function Testimonials() {
       role: "Founder - WOWSQL | Ex-Simplita", 
       content: "",
       avatar: "/logo.svg",
-      linkedin: "https://www.linkedin.com/in/saravan-p/"
+      linkedin: "https://www.linkedin.com/in/saravan-p/",
+      image: "/saravana.svg"
     },
     { 
       name: "Ajith Vaisakh", 
