@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface NoteItemProps {
   title: string;
@@ -41,8 +42,10 @@ export default function InsightSection() {
       </div>
 
       <div className="relative flex flex-col-reverse md:flex-col gap-8">
-        <div className="md:absolute right-2 xl:right-30 -top-40 transform -rotate-3 hover:rotate-0 transition-all duration-500">
-          <Image src="/cv.svg" alt="Resume Flyer" width={400} height={500} className="xl:w-full h-auto" />
+        <div className="md:absolute right-2 xl:right-30 -top-40 transform -rotate-3 hover:rotate-0 transition-all duration-500 cursor-pointer">
+          <Link href="/mystory">
+            <Image src="/cv.svg" alt="Resume Flyer" width={400} height={500} className="xl:w-full h-auto" />
+          </Link>
         </div>
 
         <div>
