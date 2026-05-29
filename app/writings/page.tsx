@@ -65,29 +65,7 @@ export default function Writings() {
               />
             </motion.div>
           </span>
-          esigners{" "}
-          <span className="relative">
-            N
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={{
-                duration: 1,
-                delay: 0.2,
-                ease: "easeOut",
-              }}
-              className="hidden md:block absolute -top-8 xl:-top-12 -right-8.5 xl:-right-12 w-full h-full"
-            >
-              <Image
-                src="/f2.svg"
-                width={100}
-                height={100}
-                alt="flower"
-                className="w-full h-full object-contain"
-              />
-            </motion.div>
-          </span>
-          ot
+          esigners Note
           <span className="relative">
             e
             <motion.div
