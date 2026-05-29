@@ -46,7 +46,7 @@ export default function Writings() {
       <div className="text-center flex items-center flex-col gap-6 py-20">
         <h1 className="text-6xl md:text-7xl xl:text-8xl font-serif leading-tight">
           <span className="relative">
-            W
+            D
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -65,9 +65,9 @@ export default function Writings() {
               />
             </motion.div>
           </span>
-          ritings I{" "}
+          esigners{" "}
           <span className="relative">
-            S
+            N
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -87,9 +87,9 @@ export default function Writings() {
               />
             </motion.div>
           </span>
-          hared
+          ot
           <span className="relative">
-            .
+            e
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
