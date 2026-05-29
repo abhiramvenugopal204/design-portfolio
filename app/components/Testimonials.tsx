@@ -26,16 +26,16 @@ function TestimonialCard({ name, role, content, className, linkedin }: Testimoni
             {content}
           </p>
         </div>
-        <div>
-          <div className="flex items-center gap-2">
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex flex-col">
             <h4 className="text-lg font-bold text-gray-900 leading-tight">{name}</h4>
-            {linkedin && (
-              <a href={linkedin} target="_blank" rel="noopener noreferrer" className="shrink-0 transition-opacity hover:opacity-80">
-                <Image src="/linkedinlogo.svg" alt="LinkedIn" width={18} height={18} className="object-contain" />
-              </a>
-            )}
+            <p className="text-sm font-medium text-gray-600 mt-1">{role}</p>
           </div>
-          <p className="text-sm font-medium text-gray-600">{role}</p>
+          {linkedin && (
+            <a href={linkedin} target="_blank" rel="noopener noreferrer" className="shrink-0 mt-0.5 transition-all duration-300 hover:scale-105 hover:opacity-90">
+              <Image src="/linkedinlogo.svg" alt="LinkedIn" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)]" />
+            </a>
+          )}
         </div>
       </div>
     </div>
