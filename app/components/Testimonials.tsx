@@ -9,9 +9,10 @@ interface TestimonialCardProps {
   content: string;
   className?: string;
   linkedin?: string;
+  instagram?: string;
 }
 
-function TestimonialCard({ name, role, content, className, linkedin }: TestimonialCardProps) {
+function TestimonialCard({ name, role, content, className, linkedin, instagram }: TestimonialCardProps) {
   return (
     <div className={`relative p-6 flex flex-col h-[24rem] ${className}`}>
       <Image src="/paper.svg" alt="Background" fill className="z-0 absolute top-0 left-0 w-full h-full object-cover opacity-90" />
@@ -36,6 +37,11 @@ function TestimonialCard({ name, role, content, className, linkedin }: Testimoni
               <Image src="/linkedinlogo.svg" alt="LinkedIn" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)]" />
             </a>
           )}
+          {instagram && (
+            <a href={instagram} target="_blank" rel="noopener noreferrer" className="shrink-0 mt-0.5 transition-all duration-300 hover:scale-105 hover:opacity-90">
+              <Image src="/instalogo.svg" alt="Instagram" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)]" />
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -51,56 +57,56 @@ export default function Testimonials() {
       role: "Technical Product Manager - IBM", 
       content: "",
       avatar: "/logo.svg",
-      linkedin: "https://www.linkedin.com"
+      linkedin: "https://www.linkedin.com/in/nithin-balachandran/"
     },
     { 
       name: "Joyel Nelson", 
       role: "Cinematographer", 
       content: "",
       avatar: "/logo.svg",
-      linkedin: "https://www.linkedin.com"
+      instagram: "https://www.instagram.com/joyel.nelson/"
     },
     { 
       name: "Akshaya Rajesh", 
       role: "Founder - Algonots", 
       content: "",
       avatar: "/logo.svg",
-      linkedin: "https://www.linkedin.com"
+      linkedin: "https://www.linkedin.com/in/akshaya-sita-rajesh/"
     },
     { 
       name: "Devaprasad S", 
       role: "Developer", 
       content: "",
       avatar: "/logo.svg",
-      linkedin: "https://www.linkedin.com"
+      linkedin: "https://www.linkedin.com/in/devaprasad-s/"
     },
     { 
       name: "Saravana Pradeep", 
       role: "Founder - WOWSQL | Ex-Simplita", 
       content: "",
       avatar: "/logo.svg",
-      linkedin: "https://www.linkedin.com"
+      linkedin: "https://www.linkedin.com/in/saravan-p/"
     },
     { 
       name: "Ajith Vaisakh", 
       role: "Cinematographer", 
       content: "",
       avatar: "/logo.svg",
-      linkedin: "https://www.linkedin.com"
+      instagram: "https://www.instagram.com/ajithvaisakh/"
     },
     { 
       name: "Subradeepan", 
       role: "Product Designer", 
       content: "",
       avatar: "/logo.svg",
-      linkedin: "https://www.linkedin.com"
+      linkedin: "https://www.linkedin.com/in/subradeepan240/"
     },
     { 
       name: "Remya Girija", 
       role: "Founder - Chapter 1", 
       content: "",
       avatar: "/logo.svg",
-      linkedin: "https://www.linkedin.com"
+      linkedin: "https://www.linkedin.com/in/remya-girija-a9a00b3a5/"
     },
   ];
 
