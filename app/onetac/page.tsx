@@ -1,9 +1,14 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
+import Dock from "../components/Dock";
 
 export default function OneTacPage() {
   return (
     <div className="min-h-screen bg-brand-yellow">
-      {/* Hero Section */}
+      <div id="introduction">
+        {/* Hero Section */}
       <section className="min-h-screen flex flex-col relative overflow-hidden">
         {/* Center text section */}
         <div className="flex-1 flex items-center justify-center px-4 pt-32 pb-40">
@@ -167,7 +172,10 @@ export default function OneTacPage() {
         </div>
       </section>
 
-      {/* Problem Section */}
+      </div>
+
+      <div id="research-phase">
+        {/* Problem Section */}
       <section className="w-full bg-white py-20 px-6 md:px-12 lg:px-24">
         <div className="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           {/* Left Column (Empty) */}
@@ -229,7 +237,10 @@ export default function OneTacPage() {
           </div>
         </div>
       </section>
-      {/* Design Approach Section */}
+      </div>
+
+      <div id="ideate">
+        {/* Design Approach Section */}
       <section className="w-full bg-white pb-10 px-6 md:px-8 lg:px-12">
         <div className="max-w-[1920px] mx-auto flex flex-col gap-12 font-kalam">
           {/* Header Text */}
@@ -267,7 +278,10 @@ export default function OneTacPage() {
         </div>
       </section>
 
-      {/* Experience Structure Section */}
+      </div>
+
+      <div id="design-guidelines">
+        {/* Experience Structure Section */}
       <section className="w-full bg-[#faeee5] py-20 px-6 md:px-12 lg:px-24 text-[#352316]">
         <div className="max-w-[1920px] mx-auto flex flex-col gap-12 font-kalam">
           {/* Header Text */}
@@ -371,7 +385,10 @@ export default function OneTacPage() {
         </div>
       </section>
 
-      {/* Showcase Image Section */}
+      </div>
+
+      <div id="final-design">
+        {/* Showcase Image Section */}
       <section className="w-full bg-white">
         <div className="w-full">
           <Image 
@@ -512,6 +529,8 @@ export default function OneTacPage() {
 
         </div>
       </section>
+      </div>
+      <Dock viewProjectUrl="#" showWebsiteDrafts={false} />
     </div>
   );
 }

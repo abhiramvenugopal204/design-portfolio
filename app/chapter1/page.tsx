@@ -1,10 +1,14 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import Dock from "../components/Dock";
 
 export default function ChapterOnePage() {
   return (
     <div className="min-h-screen bg-brand-yellow text-black relative">
-      {/* Hero Section */}
+      <div id="introduction">
+        {/* Hero Section */}
       <section className="h-screen flex flex-col relative overflow-hidden">
         {/* Center text section */}
         <div className="flex-1 flex items-center justify-center px-6 pt-20 pb-64">
@@ -144,7 +148,10 @@ export default function ChapterOnePage() {
         </div>
       </section>
 
-      {/* Context & Problem Section */}
+      </div>
+
+      <div id="research-phase">
+        {/* Context & Problem Section */}
       <section className="w-full bg-white py-20 px-6 md:px-12 lg:px-24">
         <div className="max-w-[1280px] mx-auto flex flex-col gap-12 font-sans text-black">
           {/* Header */}
@@ -557,7 +564,10 @@ export default function ChapterOnePage() {
         </div>
       </section>
 
-      {/* Moodboard & Design Direction Section */}
+      </div>
+
+      <div id="ideate">
+        {/* Moodboard & Design Direction Section */}
       <section className="w-full bg-white py-20 px-6 md:px-12 lg:px-24 border-t border-black/5">
         <div className="max-w-[1280px] mx-auto flex flex-col gap-12 font-sans text-black">
           {/* Header */}
@@ -650,7 +660,10 @@ export default function ChapterOnePage() {
         </div>
       </section>
 
-      {/* Branding and Visual Identity Section */}
+      </div>
+
+      <div id="design-guidelines">
+        {/* Branding and Visual Identity Section */}
       <section className="w-full bg-white py-20 px-6 md:px-12 lg:px-24 border-t border-black/5">
         <div className="max-w-[1280px] mx-auto flex flex-col gap-12 font-sans text-black">
           {/* Header */}
@@ -1014,7 +1027,10 @@ export default function ChapterOnePage() {
         </div>
       </section>
 
-      {/* Chapter Image 2 Section */}
+      </div>
+
+      <div id="final-design">
+        {/* Chapter Image 2 Section */}
       <section className="w-full">
         <Image
           src="/chapterimage2.svg"
@@ -1282,6 +1298,8 @@ export default function ChapterOnePage() {
 
         </div>
       </section>
+      </div>
+      <Dock viewProjectUrl="#" showWebsiteDrafts={false} />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 interface DockProps {
   viewProjectUrl?: string;
+  showWebsiteDrafts?: boolean;
 }
 
 const NAV_ITEMS = [
@@ -16,14 +17,15 @@ const NAV_ITEMS = [
   { label: "Website drafts", target: "website-drafts" },
 ];
 
-export default function Dock({ viewProjectUrl = "#" }: DockProps) {
+export default function Dock({ viewProjectUrl = "#", showWebsiteDrafts = true }: DockProps) {
   const [activeSection, setActiveSection] = useState<string>("introduction");
+  const items = showWebsiteDrafts ? NAV_ITEMS : NAV_ITEMS.filter(item => item.target !== "website-drafts");
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight / 3;
 
-      for (const item of NAV_ITEMS) {
+      for (const item of items) {
         const element = document.getElementById(item.target);
         if (element) {
           const top = element.offsetTop;
@@ -41,7 +43,7 @@ export default function Dock({ viewProjectUrl = "#" }: DockProps) {
     // Initial check
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [items]);
 
   const handleScrollTo = (targetId: string) => {
     const element = document.getElementById(targetId);
@@ -57,7 +59,7 @@ export default function Dock({ viewProjectUrl = "#" }: DockProps) {
         style={{ fontFamily: 'var(--font-kalam)' }}
       >
         <div className="flex items-center gap-1 md:gap-3 flex-shrink-0">
-          {NAV_ITEMS.map((item) => {
+          {items.map((item) => {
             const isActive = activeSection === item.target;
             return (
               <button
