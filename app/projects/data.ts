@@ -198,7 +198,7 @@ export const PROJECTS: Project[] = [
     description:
       "A high-fidelity, interactive portfolio built for a multidisciplinary creative director.",
     tags: ["1 Month", "Product Design", "Branding"],
-    image: "/project/p8.svg",
+    image: "/project/p7.svg",
     title: "Joyel —— Creative Portfolio",
     subtitle:
       "Showcasing a decade of creative leadership through a dynamic, motion-led digital experience.",
@@ -222,7 +222,7 @@ export const PROJECTS: Project[] = [
     description:
       "A minimalist, typography-driven portfolio for a product designer focused on accessibility.",
     tags: ["2 Weeks", "Product Design", "Branding"],
-    image: "/project/p9.svg",
+    image: "/project/p8.svg",
     title: "Ajith —— Product Portfolio",
     subtitle:
       "Prioritizing accessibility and clarity in digital storytelling for inclusive product design.",

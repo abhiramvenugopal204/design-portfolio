@@ -53,7 +53,7 @@ export default function Writings() {
               />
             </motion.div>
           </span>
-          esigners Note
+          esigner's Note
           <span className="relative">
 
             <motion.div
