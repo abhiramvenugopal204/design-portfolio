@@ -57,7 +57,9 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (pathname === "/simplita") {
+      const shouldHideHeader = pathname === "/simplita" || pathname === "/onetac" || pathname === "/chapter1";
+
+      if (shouldHideHeader) {
         if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
           setIsVisible(false);
         } else if (currentScrollY < lastScrollY.current) {
