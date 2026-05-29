@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import ScrollableImageGallery from "../components/ScrollableImageGallery";
+import Dock from "../components/Dock";
 
 /* 5 sections
 view project */
@@ -8,7 +11,8 @@ view project */
 export default function SimplitaCaseStudy() {
   return (
     <div className="min-h-screen bg-brand-yellow">
-      {/* Hero Section */}
+      <div id="introduction">
+        {/* Hero Section */}
       <section className="min-h-screen flex flex-col relative overflow-hidden">
         {/* Center text section */}
         <div className="flex-1 flex items-center justify-center px-4 pt-32 pb-40">
@@ -140,7 +144,10 @@ export default function SimplitaCaseStudy() {
         {/* Scrollable image placeholders */}
         <ScrollableImageGallery />
       </section>
-      {/* Design Approach Section */}
+      </div>
+
+      <div id="research-phase">
+        {/* Design Approach Section */}
       <section className="w-full bg-white flex flex-col items-center px-6 md:px-16 lg:px-24 py-20">
         <div className="w-full flex flex-col items-center text-center gap-6 mb-16 overflow-hidden">
           <h3 className="font-sans text-[16px] font-normal text-brand-black/70">My Design Approach</h3>
@@ -406,7 +413,10 @@ export default function SimplitaCaseStudy() {
         </div>
       </section>
 
-      {/* Mapping & Prioritizing Section */}
+      </div>
+
+      <div id="ideate">
+        {/* Mapping & Prioritizing Section */}
       <section className="w-full bg-white flex justify-center px-6 md:px-16 lg:px-24 py-16 md:py-24">
         <div className="w-full max-w-[1400px] grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Empty left column */}
@@ -625,8 +635,10 @@ export default function SimplitaCaseStudy() {
           </div>
         </div>
       </section>
+      </div>
 
-      {/* Structure and Streamlining Section */}
+      <div id="design-guidelines">
+        {/* Structure and streamlining Section */}
       <section className="w-full bg-white flex justify-center px-6 md:px-16 lg:px-24 py-16 md:py-24">
         <div className="w-full max-w-[1400px] grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Empty left column */}
@@ -650,7 +662,10 @@ export default function SimplitaCaseStudy() {
         </div>
       </section>
 
-      {/* Simplita Image 1 Section */}
+      </div>
+
+      <div id="final-design">
+        {/* Simplita Image 1 Section */}
       <section className="w-full bg-white py-8 md:py-16">
         <Image src="/simplitaimage1.svg" alt="Simplita Overview" width={1920} height={1000} className="w-full h-auto object-contain" />
       </section>
@@ -789,7 +804,10 @@ export default function SimplitaCaseStudy() {
         </div>
       </section>
 
-      {/* TODO: This section is to be removed or modified later */}
+      </div>
+
+      <div id="website-drafts">
+        {/* TODO: This section is to be removed or modified later */}
       <section className="w-full">
         <Image src="/scrollablescreen.svg" alt="Scrollable Details" width={1920} height={1000} className="w-full h-auto" />
       </section>
@@ -803,6 +821,8 @@ export default function SimplitaCaseStudy() {
       <section className="w-full">
         <Image src="/simplitaimage8.svg" alt="Simplita Extra Details 8" width={1920} height={1000} className="w-full h-auto" />
       </section>
+      </div>
+      <Dock viewProjectUrl="#" />
     </div>
   );
 }
