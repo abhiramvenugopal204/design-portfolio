@@ -196,7 +196,7 @@ export const PROJECTS: Project[] = [
     name: "Joyel's portfolio",
     slug: "joyel-portfolio",
     description:
-      "A high-fidelity, interactive portfolio built for a multidisciplinary creative director.",
+      "A cinematic portfolio showcasing Jooyel’s work as a cinematographer, highlighting visual storytelling across projects, styles, and formats, with selected works spanning multiple productions and capturing a diverse range of moods, compositions, and narratives.",
     tags: ["1 Month", "Product Design", "Branding"],
     image: "/project/p7.svg",
     title: "Joyel —— Creative Portfolio",
