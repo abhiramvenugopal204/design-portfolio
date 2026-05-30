@@ -146,7 +146,7 @@ export const PROJECTS: Project[] = [
     name: "Remora",
     slug: "remora",
     description:
-      "An AI-powered research assistant that helps students and researchers organize their findings and generate insights.",
+      "A pregnancy care and support guide offering clear, practical information on care, insurance, and well being, while connecting users to local resources and services for timely support.",
     tags: ["1 Month", "Product Design", "Branding"],
     image: "/project/p6.svg",
     title: "Remora —— Smart Research",
