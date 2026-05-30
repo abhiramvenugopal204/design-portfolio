@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
     name: "OneTAC",
     slug: "onetac",
     description:
-      "A tactical collaboration tool for fast-moving product teams to bridge the gap between design and development.",
+      "A pan India digital grid connecting tourism, arts, and culture, unlocking a 70M job ecosystem contributing just 1.77% to GDP, while bringing visibility to the 98% of artisans still offline.",
     tags: ["2 Weeks", "Product Design", "Branding"],
     image: "/project/p4.svg",
     title: "OneTAC —— Bridge the Gap",
