@@ -122,7 +122,7 @@ export const PROJECTS: Project[] = [
     name: "QSEVerse",
     slug: "qseverse",
     description:
-      "An immersive Metaverse experience designed for educational institutions to host interactive virtual events.",
+      "A secure, globally recognized portfolio capturing student work and skills, enabling 5× faster credentialing, improving hiring accuracy, and helping institutions and companies rely on verified proof.",
     tags: ["2 Weeks", "Product Design", "Branding"],
     image: "/project/p5.svg",
     title: "QSEVerse —— Virtual Campus",
