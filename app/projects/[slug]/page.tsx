@@ -18,7 +18,7 @@ export default function ProjectPage() {
 
     return (
         <main className="min-h-screen bg-white selection:bg-brand-yellow/30">
-            {project.slug !== "chapter-1-mobile" && project.slug !== "onetac" && project.slug !== "remora" && (
+            {project.slug !== "chapter-1-mobile" && project.slug !== "chapter-1-admin" && project.slug !== "simplita" && project.slug !== "onetac" && project.slug !== "remora" && (
                 <motion.section
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -263,6 +263,370 @@ export default function ProjectPage() {
                         height={1080} 
                         className="w-full h-auto"
                     />
+                    <HeadPop />
+                </section>
+            )}
+
+            {project.slug === "chapter-1-admin" && (
+                <section className="w-full leading-none flex flex-col" style={{ fontFamily: 'var(--font-kalam)', color: 'black' }}>
+                    <div className="flex-1 min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto w-full bg-white text-black">
+                      <Link 
+                        href="/projects" 
+                        className="text-gray-700 hover:text-black transition-colors italic text-[16px] font-normal mb-8 inline-block"
+                      >
+                        Back to projects
+                      </Link>
+
+                      <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-start">
+                        {/* Left Column */}
+                        <div className="flex flex-col gap-6">
+                          <h1 className="text-[32px] md:text-[40px] font-bold tracking-wide leading-tight">
+                            Chapter 1-Admin Dashboard
+                          </h1>
+                          
+                          <p className="text-[20px] md:text-[22px] font-normal leading-relaxed text-black/90">
+                            An admin dashboard to track student growth and well being, surfacing insights on engagement (75–85% weekly), clarity progression (3x improvement), and emotional trends, enabling data driven decisions for healthier, more confident career exploration.
+                          </p>
+
+                          <Link href="#" className="relative w-fit mt-4 group block">
+                            <Image 
+                              src="/viewAll23.svg" 
+                              alt="Visit Site" 
+                              width={180}
+                              height={70}
+                              className="w-auto h-auto group-hover:scale-105 transition-transform origin-left"
+                            />
+                          </Link>
+
+                          {/* Top Grid Info */}
+                          <div className="grid grid-cols-2 gap-y-10 gap-x-8 mt-12">
+                            <div>
+                              <h3 className="text-gray-400 italic text-[16px] mb-1">My Role</h3>
+                              <p className="font-semibold text-[16px]">UI/UX Designer</p>
+                            </div>
+                            <div>
+                              <h3 className="text-gray-400 italic text-[16px] mb-1">Team</h3>
+                              <p className="font-semibold text-[16px] leading-snug">1 Product Designer, 2 Developers, 1 Lead Manager</p>
+                            </div>
+                            <div>
+                              <h3 className="text-gray-400 italic text-[16px] mb-1">Industry</h3>
+                              <p className="font-semibold text-[16px]">Ed-Tech</p>
+                            </div>
+                            <div>
+                              <h3 className="text-gray-400 italic text-[16px] mb-1">Timeline</h3>
+                              <p className="font-semibold text-[16px] leading-snug">January 2026 - April 2026</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Right Column */}
+                        <div className="w-full relative flex justify-center items-start lg:sticky lg:top-32">
+                          <Image 
+                            src="/chapteradmin.svg" 
+                            alt="Chapter 1 Admin Dashboard" 
+                            width={900} 
+                            height={800} 
+                            className="w-full h-auto object-contain"
+                            priority
+                          />
+                        </div>
+                      </div>
+
+                      {/* Bottom Grid Info */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 mt-16 w-full">
+                        {/* Challenge */}
+                        <div className="flex flex-col gap-3">
+                          <h3 className="text-gray-400 italic text-[18px]">Challenge</h3>
+                          <ul className="flex flex-col gap-2 font-semibold text-[16px] leading-relaxed">
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Students felt overwhelmed by career and identity decisions</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Existing guidance platforms lacked emotional sensitivity</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Long onboarding flows created early drop-offs</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Exploration journeys felt confusing and unstructured</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Balancing personalization with simplicity for younger users</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Solution */}
+                        <div className="flex flex-col gap-3">
+                          <h3 className="text-gray-400 italic text-[18px]">Solution</h3>
+                          <ul className="flex flex-col gap-2 font-semibold text-[16px] leading-relaxed">
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Designed a guided and emotionally-aware onboarding flow</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Simplified decision-making into structured pathways</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Reduced unnecessary steps and cognitive overload</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Built a calm, trust-driven interface system</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Created exploration flows focused on clarity over complexity</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Impact */}
+                        <div className="flex flex-col gap-3">
+                          <h3 className="text-gray-400 italic text-[18px]">Impact</h3>
+                          <ul className="flex flex-col gap-2 font-semibold text-[16px] leading-relaxed">
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>94% onboarding completion rate</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Under 3-minute onboarding experience</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>34% reduction in mid-flow abandonment</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Improved exploration-to-action conversion</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>More balanced engagement across platform features</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Learnings */}
+                        <div className="flex flex-col gap-3">
+                          <h3 className="text-gray-400 italic text-[18px]">Learnings</h3>
+                          <ul className="flex flex-col gap-2 font-semibold text-[16px] leading-relaxed">
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Students engage better when guidance feels calm, not instructional</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Emotional safety in onboarding improves trust and completion</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Structured exploration reduces anxiety around decision-making</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Younger users respond better to clarity than excessive choice</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Small interaction decisions strongly influence confidence and progression</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <Dock viewProjectUrl="#" />
+                    <HeadPop />
+                </section>
+            )}
+
+            {project.slug === "simplita" && (
+                <section className="w-full leading-none flex flex-col" style={{ fontFamily: 'var(--font-kalam)', color: 'black' }}>
+                    <div className="flex-1 min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto w-full bg-white text-black">
+                      <Link 
+                        href="/projects" 
+                        className="text-gray-700 hover:text-black transition-colors italic text-[16px] font-normal mb-8 inline-block"
+                      >
+                        Back to projects
+                      </Link>
+
+                      <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-start">
+                        {/* Left Column */}
+                        <div className="flex flex-col gap-6">
+                          <h1 className="text-[32px] md:text-[40px] font-bold tracking-wide leading-tight">
+                            Simplita
+                          </h1>
+                          
+                          <p className="text-[20px] md:text-[22px] font-normal leading-relaxed text-black/90">
+                            An enterprise grade agentic AI platform built to design, automate, and run complex business systems at scale, enabling teams to build AI workflows and full stack applications visually with faster deployment, reduced development time by up to 60%, and production ready automation.
+                          </p>
+
+                          <Link href="/simplita" className="relative w-fit mt-4 group block">
+                            <Image 
+                              src="/viewproj.svg" 
+                              alt="View Project" 
+                              width={180}
+                              height={70}
+                              className="w-auto h-auto group-hover:scale-105 transition-transform origin-left"
+                            />
+                          </Link>
+
+                          {/* Top Grid Info */}
+                          <div className="grid grid-cols-2 gap-y-10 gap-x-8 mt-12">
+                            <div>
+                              <h3 className="text-gray-400 italic text-[16px] mb-1">My Role</h3>
+                              <p className="font-semibold text-[16px]">UI/UX Designer</p>
+                            </div>
+                            <div>
+                              <h3 className="text-gray-400 italic text-[16px] mb-1">Team</h3>
+                              <p className="font-semibold text-[16px] leading-snug">
+                                1 Product Designer, 2 Ui/UX Designers, 1 Product Manager, 2 Engineering Manager, 4 Tech Leads, 7 Developers, 7 Simplita Automation Engineers (In-app developers), 4 Digital Marketing staffs
+                              </p>
+                            </div>
+                            <div>
+                              <h3 className="text-gray-400 italic text-[16px] mb-1">Industry</h3>
+                              <p className="font-semibold text-[16px]">AI Automation & Enterprise SaaS</p>
+                            </div>
+                            <div>
+                              <h3 className="text-gray-400 italic text-[16px] mb-1">Timeline</h3>
+                              <p className="font-semibold text-[16px] leading-snug">January 2025 - February 2026</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Right Column */}
+                        <div className="w-full relative flex justify-center items-start lg:sticky lg:top-32">
+                          <Image 
+                            src="/simplitaproj.svg" 
+                            alt="Simplita" 
+                            width={900} 
+                            height={800} 
+                            className="w-full h-auto object-contain"
+                            priority
+                          />
+                        </div>
+                      </div>
+
+                      {/* Bottom Grid Info */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 mt-16 w-full">
+                        {/* Challenge */}
+                        <div className="flex flex-col gap-3">
+                          <h3 className="text-gray-400 italic text-[18px]">Challenge</h3>
+                          <ul className="flex flex-col gap-2 font-semibold text-[16px] leading-relaxed">
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Enterprise workflows were fragmented and difficult to scale</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Complex automation logic created usability friction</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Lack of design consistency slowed development cycles</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Cross-team collaboration suffered from unclear handoffs</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Technical flexibility needed to coexist with product clarity</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Solution */}
+                        <div className="flex flex-col gap-3">
+                          <h3 className="text-gray-400 italic text-[18px]">Solution</h3>
+                          <ul className="flex flex-col gap-2 font-semibold text-[16px] leading-relaxed">
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Designed structured workflow and automation experiences</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Built scalable UI systems and reusable design patterns</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Standardized design-to-development documentation flows</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Simplified complex automation interactions into usable journeys</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Improved interaction consistency across the platform ecosystem</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Impact */}
+                        <div className="flex flex-col gap-3">
+                          <h3 className="text-gray-400 italic text-[18px]">Impact</h3>
+                          <ul className="flex flex-col gap-2 font-semibold text-[16px] leading-relaxed">
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Reduced implementation confusion by ~55%</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Improved development clarity by ~48%</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Helped engineers ship features ~40% faster</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Reduced UI inconsistencies across the platform by ~45%</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Strengthened cross-team collaboration efficiency by ~50%</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Learnings */}
+                        <div className="flex flex-col gap-3">
+                          <h3 className="text-gray-400 italic text-[18px]">Learnings</h3>
+                          <ul className="flex flex-col gap-2 font-semibold text-[16px] leading-relaxed">
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Workflow clarity matters more than interface complexity</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Systems thinking becomes critical in automation products</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Early structure prevents large-scale product rework later</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Scalable patterns reduce operational and design friction</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span>&middot;</span>
+                              <span>Strong collaboration shapes better technical product decisions</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <Dock viewProjectUrl="#" />
                     <HeadPop />
                 </section>
             )}

@@ -41,17 +41,16 @@ export default function SimplitaCaseStudy() {
 
       {/* Media Section */}
       <section className="w-full flex flex-col md:flex-row bg-[#A6F7CD]">
-        {/* Left: YouTube Video Placeholder */}
-        <div className="w-full md:w-1/2 aspect-video md:aspect-auto md:min-h-screen flex items-center justify-center bg-black/5 relative">
-          <div className="text-center p-8">
-            <div className="w-16 h-16 mx-auto mb-4 bg-black/10 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 text-black/50 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-            <p className="text-xl font-bold font-sans text-brand-black/50">YouTube Video Placeholder</p>
-            <p className="text-sm font-sans text-brand-black/40 mt-2">Video link to be added</p>
-          </div>
+        {/* Left: YouTube Video Embed */}
+        <div className="w-full md:w-1/2 aspect-video md:aspect-auto md:min-h-screen bg-black relative">
+          <iframe
+            className="w-full h-full absolute inset-0"
+            src="https://www.youtube.com/embed/67zZ24IpIqo"
+            title="Simplita Demo Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
 
         {/* Right: Simplita UI Image */}
