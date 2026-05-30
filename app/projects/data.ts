@@ -220,7 +220,7 @@ export const PROJECTS: Project[] = [
     name: "Ajith's Portfolio",
     slug: "ajith-portfolio",
     description:
-      "A minimalist, typography-driven portfolio for a product designer focused on accessibility.",
+      "An interactive, modern portfolio for Ajith Vaisakh, showcasing his work through dynamic layouts and engaging interactions, highlighting projects, skills, and creative exploration with a focus on clarity, usability, and visual impact.",
     tags: ["2 Weeks", "Product Design", "Branding"],
     image: "/project/p8.svg",
     title: "Ajith —— Product Portfolio",
