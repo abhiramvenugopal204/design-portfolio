@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
     name: "Chapter 1-Admin Dashboard",
     slug: "chapter-1-admin",
     description:
-      "A centralized admin dashboard that unifies student insights, consulting workflows, and appointment scheduling—enabling teams to track progress, manage sessions, and deliver timely, informed support with clarity and ease.",
+      "An admin dashboard to track student growth and well being, surfacing insights on engagement (75–85% weekly), clarity progression (3× improvement), and emotional trends, enabling data driven decisions for healthier, more confident career exploration.",
     tags: ["1 Month", "Product Design", "Branding"],
     image: "/project/p2.svg",
     title: "Chapter 1 Admin —— Unified Insight",
@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
     name: "Simplita",
     slug: "simplita",
     description:
-      "A simplified financial wellness platform designed to help young adults manage their money with confidence and ease.",
+      "An enterprise grade agentic AI platform built to design, automate, and run complex business systems at scale, enabling teams to build AI workflows and full stack applications visually with faster deployment, reduced development time by up to 60%, and production ready automation.",
     tags: ["10 Months", "Product Design", "Branding"],
     image: "/project/p3.svg",
     title: "Simplita —— Finance for all",
@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
     name: "OneTAC",
     slug: "onetac",
     description:
-      "A tactical collaboration tool for fast-moving product teams to bridge the gap between design and development.",
+      "A pan India digital grid connecting tourism, arts, and culture, unlocking a 70M job ecosystem contributing just 1.77% to GDP, while bringing visibility to the 98% of artisans still offline.",
     tags: ["2 Weeks", "Product Design", "Branding"],
     image: "/project/p4.svg",
     title: "OneTAC —— Bridge the Gap",
@@ -122,7 +122,7 @@ export const PROJECTS: Project[] = [
     name: "QSEVerse",
     slug: "qseverse",
     description:
-      "An immersive Metaverse experience designed for educational institutions to host interactive virtual events.",
+      "A secure, globally recognized portfolio capturing student work and skills, enabling 5× faster credentialing, improving hiring accuracy, and helping institutions and companies rely on verified proof.",
     tags: ["2 Weeks", "Product Design", "Branding"],
     image: "/project/p5.svg",
     title: "QSEVerse —— Virtual Campus",
@@ -146,7 +146,7 @@ export const PROJECTS: Project[] = [
     name: "Remora",
     slug: "remora",
     description:
-      "An AI-powered research assistant that helps students and researchers organize their findings and generate insights.",
+      "A pregnancy care and support guide offering clear, practical information on care, insurance, and well being, while connecting users to local resources and services for timely support.",
     tags: ["1 Month", "Product Design", "Branding"],
     image: "/project/p6.svg",
     title: "Remora —— Smart Research",
@@ -196,7 +196,7 @@ export const PROJECTS: Project[] = [
     name: "Joyel's portfolio",
     slug: "joyel-portfolio",
     description:
-      "A high-fidelity, interactive portfolio built for a multidisciplinary creative director.",
+      "A cinematic portfolio showcasing Jooyel’s work as a cinematographer, highlighting visual storytelling across projects, styles, and formats, with selected works spanning multiple productions and capturing a diverse range of moods, compositions, and narratives.",
     tags: ["1 Month", "Product Design", "Branding"],
     image: "/project/p7.svg",
     title: "Joyel —— Creative Portfolio",
@@ -220,7 +220,7 @@ export const PROJECTS: Project[] = [
     name: "Ajith's Portfolio",
     slug: "ajith-portfolio",
     description:
-      "A minimalist, typography-driven portfolio for a product designer focused on accessibility.",
+      "An interactive, modern portfolio for Ajith Vaisakh, showcasing his work through dynamic layouts and engaging interactions, highlighting projects, skills, and creative exploration with a focus on clarity, usability, and visual impact.",
     tags: ["2 Weeks", "Product Design", "Branding"],
     image: "/project/p8.svg",
     title: "Ajith —— Product Portfolio",
