@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
     name: "Chapter 1-Admin Dashboard",
     slug: "chapter-1-admin",
     description:
-      "A centralized admin dashboard that unifies student insights, consulting workflows, and appointment scheduling—enabling teams to track progress, manage sessions, and deliver timely, informed support with clarity and ease.",
+      "An admin dashboard to track student growth and well being, surfacing insights on engagement (75–85% weekly), clarity progression (3× improvement), and emotional trends, enabling data driven decisions for healthier, more confident career exploration.",
     tags: ["1 Month", "Product Design", "Branding"],
     image: "/project/p2.svg",
     title: "Chapter 1 Admin —— Unified Insight",
@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
     name: "Simplita",
     slug: "simplita",
     description:
-      "A simplified financial wellness platform designed to help young adults manage their money with confidence and ease.",
+      "An enterprise grade agentic AI platform built to design, automate, and run complex business systems at scale, enabling teams to build AI workflows and full stack applications visually with faster deployment, reduced development time by up to 60%, and production ready automation.",
     tags: ["10 Months", "Product Design", "Branding"],
     image: "/project/p3.svg",
     title: "Simplita —— Finance for all",
