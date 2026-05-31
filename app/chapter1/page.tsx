@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { ImageWithLoader as Image, HtmlImgWithLoader } from "../components/ImageWithLoader";
 import Dock from "../components/Dock";
 
 const scrollImages = [
@@ -163,7 +163,7 @@ export default function ChapterOnePage() {
                 <div className="animate-marquee flex gap-6 pr-6">
                   {[...scrollImages, ...scrollImages].map((src, i) => (
                     <div key={`scroll-${i}`} className="h-[360px] md:h-[420px] w-auto flex-shrink-0 flex items-center justify-center hover:scale-[1.03] transition-transform duration-300 drop-shadow-md">
-                      <img
+                      <HtmlImgWithLoader
                         src={src}
                         alt="Chapter 1 Interface"
                         className="h-full w-auto object-contain"
