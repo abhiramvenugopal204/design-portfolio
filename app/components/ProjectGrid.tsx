@@ -18,7 +18,7 @@ function ProjectCard({ title, description, img, className, href, buttonImg }: Pr
       <Image src="/line1.svg" alt={title} width={400} height={400} className="absolute -bottom-1.5 right-0 w-full h-fit object-fill" />
       <Image src="/line2.svg" alt={title} width={400} height={400} className="absolute bottom-0 -right-1.5 w-fit h-full object-fill" />
 
-      <Image src="/case.svg" alt="" width={100} height={100} className="block md:hidden absolute -top-2 -right-4 w-fit h-[3em] rotate-25 object-contain pointer-events-none" />
+
 
       <div className="z-10 flex flex-col gap-4 relative flex-1">
         <div className="flex justify-between items-start gap-4">

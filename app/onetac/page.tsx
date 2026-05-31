@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { ImageWithLoader as Image } from "../components/ImageWithLoader";
 import Dock from "../components/Dock";
 
 export default function OneTacPage() {
@@ -530,7 +530,7 @@ export default function OneTacPage() {
         </div>
       </section>
       </div>
-      <Dock viewProjectUrl="#" showWebsiteDrafts={false} />
+      <Dock viewProjectUrl="/projects" showWebsiteDrafts={false} />
     </div>
   );
 }

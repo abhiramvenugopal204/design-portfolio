@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { ImageWithLoader as Image } from "../components/ImageWithLoader";
 import ScrollableImageGallery from "../components/ScrollableImageGallery";
 import Dock from "../components/Dock";
 
@@ -821,7 +821,7 @@ export default function SimplitaCaseStudy() {
         <Image src="/simplitaimage8.svg" alt="Simplita Extra Details 8" width={1920} height={1000} className="w-full h-auto" />
       </section>
       </div>
-      <Dock viewProjectUrl="#" />
+      <Dock viewProjectUrl="/projects" />
     </div>
   );
 }

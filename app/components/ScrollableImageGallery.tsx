@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import { HtmlImgWithLoader } from "./ImageWithLoader";
 
 const simplitaImages = [
   "/scroll/simplita/workspace.svg",
@@ -160,7 +161,7 @@ export default function ScrollableImageGallery() {
                   : "scale-[0.88] opacity-40 hover:opacity-65"
               }`}
             >
-              <img
+              <HtmlImgWithLoader
                 src={src}
                 alt="Simplita Workflow Interface"
                 className="w-full h-full object-contain"
