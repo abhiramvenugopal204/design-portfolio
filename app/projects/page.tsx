@@ -172,6 +172,9 @@ export default function Projects() {
 
                                 {/* MOBILE ONLY INFO (Hidden on Desktop) */}
                                 <div className="lg:hidden p-8 flex flex-col items-center text-center">
+                                    <h3 className="text-2xl md:text-3xl font-bold font-sans italic text-black mb-4">
+                                        {project.name}
+                                    </h3>
                                     <Link
                                         href={`/projects/${project.slug}`}
                                         className="mb-8 relative group shrink-0"
