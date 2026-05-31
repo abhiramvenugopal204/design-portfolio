@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { ImageWithLoader as Image } from "../components/ImageWithLoader";
 import ScrollableImageGallery from "../components/ScrollableImageGallery";
 import Dock from "../components/Dock";
 
