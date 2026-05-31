@@ -17,7 +17,7 @@ const NAV_ITEMS = [
   { label: "Website drafts", target: "website-drafts" },
 ];
 
-export default function Dock({ viewProjectUrl = "#", showWebsiteDrafts = true }: DockProps) {
+export default function Dock({ viewProjectUrl = "/projects", showWebsiteDrafts = true }: DockProps) {
   const [activeSection, setActiveSection] = useState<string>("introduction");
   const items = showWebsiteDrafts ? NAV_ITEMS : NAV_ITEMS.filter(item => item.target !== "website-drafts");
 

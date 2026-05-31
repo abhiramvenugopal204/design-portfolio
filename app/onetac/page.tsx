@@ -530,7 +530,7 @@ export default function OneTacPage() {
         </div>
       </section>
       </div>
-      <Dock viewProjectUrl="#" showWebsiteDrafts={false} />
+      <Dock viewProjectUrl="/projects" showWebsiteDrafts={false} />
     </div>
   );
 }

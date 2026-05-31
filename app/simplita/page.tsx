@@ -821,7 +821,7 @@ export default function SimplitaCaseStudy() {
         <Image src="/simplitaimage8.svg" alt="Simplita Extra Details 8" width={1920} height={1000} className="w-full h-auto" />
       </section>
       </div>
-      <Dock viewProjectUrl="#" />
+      <Dock viewProjectUrl="/projects" />
     </div>
   );
 }
