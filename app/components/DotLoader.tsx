@@ -18,11 +18,11 @@ export default function DotLoader({ size = 256, className = "" }: DotLoaderProps
   
   // Colors for the 5 dots
   const colors = [
-    "#E53935", // Red
-    "#1E88E5", // Blue
-    "#43A047", // Green
-    "#FDD835", // Yellow
-    "#FB8C00", // Orange
+    "#FFD11D", // Brand Yellow
+    "#FFD11D", // Brand Yellow
+    "#FFD11D", // Brand Yellow
+    "#FFD11D", // Brand Yellow
+    "#FFD11D", // Brand Yellow
   ];
 
   return (
