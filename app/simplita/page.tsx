@@ -1,14 +1,30 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { ImageWithLoader as Image } from "../components/ImageWithLoader";
 import ScrollableImageGallery from "../components/ScrollableImageGallery";
 import Dock from "../components/Dock";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import SwipeLeftAnimation from "../components/SwipeLeftAnimation";
 
 /* 5 sections
 view project */
 
 export default function SimplitaCaseStudy() {
+  const overviewRef = useRef(null);
+  const isOverviewInView = useInView(overviewRef, { once: true, margin: "-20% 0px -20% 0px" });
+  const [showSwipeHint, setShowSwipeHint] = useState(false);
+
+  useEffect(() => {
+    if (isOverviewInView) {
+      setShowSwipeHint(true);
+      const timer = setTimeout(() => {
+        setShowSwipeHint(false);
+      }, 2500);
+      return () => clearTimeout(timer);
+    }
+  }, [isOverviewInView]);
+
   return (
     <div className="min-h-screen bg-brand-yellow">
       <div id="introduction">
@@ -128,7 +144,7 @@ export default function SimplitaCaseStudy() {
       </section>
 
       {/* Overview Section */}
-      <section className="w-full bg-gradient-to-b from-[#1cdb8b] to-[#76fbc4] flex flex-col pt-16 md:pt-24 min-h-screen relative overflow-hidden">
+      <section ref={overviewRef} className="w-full bg-gradient-to-b from-[#1cdb8b] to-[#76fbc4] flex flex-col pt-16 md:pt-24 min-h-screen relative overflow-hidden">
         {/* Text content */}
         <div className="px-6 md:px-16 lg:px-24 mb-16 flex flex-col gap-4 z-10">
           <h3 className="font-sans italic text-[16px] text-white/90">Quick Overview</h3>
@@ -142,6 +158,32 @@ export default function SimplitaCaseStudy() {
 
         {/* Scrollable image placeholders */}
         <ScrollableImageGallery />
+
+        {/* Swipe Left Hint Overlay */}
+        <AnimatePresence>
+          {showSwipeHint && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="absolute inset-0 flex flex-col items-center justify-center bg-black/20 backdrop-blur-[2px] z-30 pointer-events-none"
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.85 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+                className="bg-white/95 p-8 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] flex flex-col items-center justify-center gap-3 border border-white/50"
+              >
+                <SwipeLeftAnimation size={110} />
+                <span className="text-[16px] font-bold text-black/85 tracking-wide font-sans italic">
+                  Swipe left to view designs
+                </span>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </section>
       </div>
 
