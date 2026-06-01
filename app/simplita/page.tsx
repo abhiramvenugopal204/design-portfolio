@@ -12,7 +12,7 @@ view project */
 
 export default function SimplitaCaseStudy() {
   const overviewRef = useRef(null);
-  const isOverviewInView = useInView(overviewRef, { once: true, margin: "-20% 0px -20% 0px" });
+  const isOverviewInView = useInView(overviewRef, { margin: "-20% 0px -20% 0px" });
   const [showSwipeHint, setShowSwipeHint] = useState(false);
 
   useEffect(() => {
@@ -22,6 +22,8 @@ export default function SimplitaCaseStudy() {
         setShowSwipeHint(false);
       }, 2500);
       return () => clearTimeout(timer);
+    } else {
+      setShowSwipeHint(false);
     }
   }, [isOverviewInView]);
 
