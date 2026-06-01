@@ -12,7 +12,7 @@ view project */
 
 export default function SimplitaCaseStudy() {
   const overviewRef = useRef(null);
-  const isOverviewInView = useInView(overviewRef, { once: true, margin: "-20% 0px -20% 0px" });
+  const isOverviewInView = useInView(overviewRef, { margin: "-20% 0px -20% 0px" });
   const [showSwipeHint, setShowSwipeHint] = useState(false);
 
   useEffect(() => {
@@ -22,6 +22,8 @@ export default function SimplitaCaseStudy() {
         setShowSwipeHint(false);
       }, 2500);
       return () => clearTimeout(timer);
+    } else {
+      setShowSwipeHint(false);
     }
   }, [isOverviewInView]);
 
@@ -59,14 +61,15 @@ export default function SimplitaCaseStudy() {
       <section className="w-full flex flex-col md:flex-row bg-[#A6F7CD]">
         {/* Left: YouTube Video Embed */}
         <div className="w-full md:w-1/2 aspect-video md:aspect-auto md:min-h-screen bg-black relative">
-          <iframe
-            className="w-full h-full absolute inset-0"
-            src="https://www.youtube.com/embed/67zZ24IpIqo"
-            title="Simplita Demo Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
+          <video
+            className="w-full h-full absolute inset-0 object-contain bg-black"
+            src="/video/simplita.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
+          />
         </div>
 
         {/* Right: Simplita UI Image */}
