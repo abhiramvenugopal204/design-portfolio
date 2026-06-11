@@ -29,16 +29,24 @@ export default function Highlight() {
                 />
                 <div className="flex gap-2 items-center justify-between flex-col md:flex-row ">
                     {
-                        [hi1, hi2, hi3].map((img, i) => (
-                            <div key={i} className="relative w-full h-fit">
+                        [
+                            { img: hi1, href: "/simplita", alt: "Simplita AI" },
+                            { img: hi2, href: "/onetac", alt: "OneTAC" },
+                            { img: hi3, href: "/chapter1", alt: "Chapter 1" }
+                        ].map((project, i) => (
+                            <Link 
+                                key={i} 
+                                href={project.href} 
+                                className="relative w-full h-fit block cursor-pointer transition-transform duration-300 ease-out hover:scale-[1.03] active:scale-[0.98]"
+                            >
                                 <Image
-                                    src={img}
-                                    alt="View All"
+                                    src={project.img}
+                                    alt={project.alt}
                                     width={100}
                                     height={100}
                                     className="w-full md:w-fit h-fit z-1 object-contain"
                                 />
-                            </div>
+                            </Link>
                         ))
                     }
                     <Link href="/projects" className="md:hidden">

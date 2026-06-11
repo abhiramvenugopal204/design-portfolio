@@ -37,21 +37,33 @@ export default function Things() {
     const personalImages = [m1, m2, m3, m4, m5, m6, m7, m8, m9];
 
     useEffect(() => {
+        if (!containerRef.current || !scrollRef.current) return;
+
         const updateWidth = () => {
-            if (containerRef.current) {
-                setDragWidth(containerRef.current.scrollWidth - containerRef.current.offsetWidth);
+            if (containerRef.current && scrollRef.current) {
+                setDragWidth(scrollRef.current.scrollWidth - containerRef.current.offsetWidth);
             }
         };
 
-        // Use a small timeout to ensure DOM has rendered
-        const timer = setTimeout(updateWidth, 100);
+        const resizeObserver = new ResizeObserver(() => {
+            updateWidth();
+        });
+        resizeObserver.observe(containerRef.current);
+        resizeObserver.observe(scrollRef.current);
 
-        window.addEventListener('resize', updateWidth);
+        // Run a few updates with timeouts to ensure hydration and image rendering are finished
+        updateWidth();
+        const t1 = setTimeout(updateWidth, 100);
+        const t2 = setTimeout(updateWidth, 500);
+        const t3 = setTimeout(updateWidth, 1500);
+
         return () => {
-            window.removeEventListener('resize', updateWidth);
-            clearTimeout(timer);
-        }
-    }, [personalImages.length]);
+            resizeObserver.disconnect();
+            clearTimeout(t1);
+            clearTimeout(t2);
+            clearTimeout(t3);
+        };
+    }, []);
 
     const images = [
         { src: f1, rotate: "-10deg", scale: "1.1" },
@@ -240,31 +252,43 @@ export default function Things() {
                     Now here’s some personal stuff
                 </h1>
 
-                <div ref={containerRef} className="relative w-full overflow-hidden">
-                    <motion.div
+                <div ref={containerRef} className={`relative w-full no-scrollbar flex ${dragWidth > 0 ? "overflow-x-auto justify-start" : "overflow-hidden justify-center"}`}>
+                    <div
                         ref={scrollRef}
-                        drag="x"
-                        dragConstraints={{ left: -dragWidth, right: 0 }}
-                        className="relative w-full h-fit flex items-center flex-nowrap no-scrollbar px-4 md:px-10 pb-10 mt-4 cursor-grab active:cursor-grabbing"
+                        className="relative w-max h-fit flex items-center flex-nowrap px-4 md:px-10 pb-10 mt-4"
                     >
                         {
-                            personalImages.map((item, i) => (
-                                <motion.div
-                                    key={i}
-                                    onClick={() => setSelectedImage(i)}
-                                    className="relative flex-shrink-0 h-[18rem] w-[200px] md:w-[300px] lg:w-[350px] -ml-16 md:-ml-20 lg:-ml-42 first:-ml-10 transition-all duration-300 hover:scale-110 hover:z-50 hover:-translate-y-2 cursor-pointer"
-                                >
-                                    <Image
-                                        src={item}
-                                        alt={`personal-${i + 1}`}
-                                        width={350}
-                                        height={350}
-                                        className="w-full h-full object-contain drop-shadow-xl pointer-events-none"
-                                    />
-                                </motion.div>
-                            ))
+                            (() => {
+                                const rotations = [-5, 4, -6, 5, -4, 6, -5, 4, -6];
+                                const yTranslations = [10, -5, 12, -8, 8, -6, 10, -10, 8];
+                                return personalImages.map((item, i) => {
+                                    const rot = rotations[i % rotations.length];
+                                    const yTrans = yTranslations[i % yTranslations.length];
+                                    return (
+                                        <div
+                                            key={i}
+                                            onClick={() => setSelectedImage(i)}
+                                            style={{
+                                                transform: `rotate(${rot}deg) translateY(${yTrans}px)`,
+                                                transformOrigin: "center center"
+                                            }}
+                                            className="relative flex-shrink-0 h-[15rem] w-[170px] md:w-[250px] lg:w-[300px] -ml-12 md:-ml-24 lg:-ml-36 first:-ml-4 md:first:-ml-8 lg:first:-ml-12 cursor-pointer"
+                                        >
+                                            <Image
+                                                src={item}
+                                                alt={`personal-${i + 1}`}
+                                                width={350}
+                                                height={350}
+                                                className="w-full h-full object-contain drop-shadow-xl pointer-events-none"
+                                            />
+                                        </div>
+                                    );
+                                });
+                            })()
                         }
-                    </motion.div>
+                        {/* Spacer at the end to offset negative margin of the last photo and guarantee full drag visibility with nice padding */}
+                        <div className="w-16 md:w-28 lg:w-44 flex-shrink-0 pointer-events-none" />
+                    </div>
                 </div>
             </div>
 
