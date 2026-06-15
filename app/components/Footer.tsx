@@ -71,7 +71,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-4 relative">
-            <h5 className="text-brand-yellow font-black uppercase tracking-widest">{mounted ? time : "..."}</h5>
+            <h5 className="text-brand-yellow font-black uppercase tracking-widest">INDIA - {mounted ? time : "..."}</h5>
             <div className="flex flex-col gap-2">
               <Link href="https://www.linkedin.com/in/abhiramvgp/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-all">LinkedIn</Link>
               <Link href="https://dribbble.com/abhiramvgp" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-all">Dribbble</Link>
