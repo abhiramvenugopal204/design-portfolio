@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -7,6 +8,25 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   const pathname = usePathname();
+  const [time, setTime] = useState<string>("");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const updateTime = () => {
+      setTime(
+        new Date().toLocaleTimeString("en-IN", {
+          hour: "numeric",
+          minute: "numeric",
+          hour12: true,
+          timeZone: "Asia/Kolkata",
+        })
+      );
+    };
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Hide footer on contact page
   if (pathname === "/contact") return null;
@@ -51,7 +71,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-4 relative">
-            <h5 suppressHydrationWarning className="text-brand-yellow font-black uppercase tracking-widest">India - {new Date().toLocaleTimeString('en-In', { hour: 'numeric', minute: 'numeric', hour12: true, timeZone: 'Asia/Kolkata' })}</h5>
+            <h5 className="text-brand-yellow font-black uppercase tracking-widest">{mounted ? time : "..."}</h5>
             <div className="flex flex-col gap-2">
               <Link href="https://www.linkedin.com/in/abhiramvgp/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-all">LinkedIn</Link>
               <Link href="https://dribbble.com/abhiramvgp" target="_blank" rel="noopener noreferrer" className="hover:text-brand-yellow transition-all">Dribbble</Link>
